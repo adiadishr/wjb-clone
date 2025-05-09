@@ -29,13 +29,13 @@ export default function Nav() {
           <div className="relative">
             <Image className="object-cover" src="/logo.webp" height={0} width={100} alt="Logo" />
           </div>
-          <div className="lg:flex items-center gap-4 text-gray-900 font-medium tracking-tight hidden">
-            <a href="/services" className={cn(pathname === '/' && 'text-primary')}>Home</a>
-            <a href="/about" className={cn(pathname === '/about' && 'text-primary')}>About Us</a>
-            <a href="/contact" className={cn(pathname === '/services' && 'text-primary')}>Services</a>
-            <a href="/contact" className={cn(pathname === '/services' && 'text-primary')}>Portfolio</a>
-            <a href="/contact" className={cn(pathname === '/services' && 'text-primary')}>Privacy Policy</a>
-            <a href="/contact" className={cn(pathname === '/services' && 'text-primary')}>Blogs</a>
+          <div className="lg:flex items-center gap-4 text-gray-900 text-sm font-semibold uppercase hidden">
+            <a href="/" className={cn('duration-300', pathname === '/' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>Home</a>
+            <a href="/about" className={cn('duration-300', pathname === '/about' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>About Us</a>
+            <a href="/contact" className={cn('duration-300', pathname === '/about' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>Services</a>
+            <a href="/contact" className={cn('duration-300', pathname === '/about' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>Portfolio</a>
+            <a href="/contact" className={cn('duration-300', pathname === '/about' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>Privacy Policy</a>
+            <a href="/contact" className={cn('duration-300', pathname === '/about' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>Blogs</a>
           </div>
           <Button size={'lg'}>Discover More</Button>
         </div>

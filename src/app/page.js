@@ -13,8 +13,12 @@ import {
 } from "@/components/ui/carousel"
 import { Testimonials } from "@/components/magicui/marquee";
 import Image from "next/image";
+import { FlickeringGrid } from "@/components/magicui/flickering-grid";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { NumberTicker } from "@/components/magicui/number-ticker";
 
 export default function Page() {
+  const mobile = useIsMobile();
   const [mounted, setMounted] = useState(false)
   useEffect(() => {
     const lenis = new Lenis({
@@ -23,7 +27,15 @@ export default function Page() {
 
   }, [])
   return (<>
-    <div className="container mx-auto px-[5%] mt-[60px] md:mt-[100px] min-h-[calc(100dvh-60px)] md:min-h-[calc(100dvh-100px)] flex flex-col justify-center">
+    <div className="container mx-auto md:px-[5%] sm:px-[1.5%] px-[5%] mt-[60px] md:mt-[100px] min-h-[calc(100dvh-60px)] md:min-h-[calc(100dvh-100px)] flex flex-col justify-center relative">
+      <FlickeringGrid
+        className="absolute inset-0 z-0 size-full"
+        squareSize={4}
+        gridGap={6}
+        color="#6B7280"
+        maxOpacity={0.25}
+        flickerChance={0.5}
+      />
       <div className="md:text-left leading-tight text-center text-4xl md:text-5xl font-pt-serif tracking-tight mb-4">
         From blueprint, <br />to <span className="italic">Brilliance.</span>
       </div>
@@ -39,11 +51,11 @@ export default function Page() {
       </div>
     </div>
     <div className="bg-neutral text-neutral-foreground">
-      <div className="container px-[5%] mx-auto py-24 md:pt-36 md:pb-28 flex md:flex-row flex-col relative gap-x-16">
-        <div className="flex md:w-[40%] w-full sticky top-34 h-[32rem]">
+      <div className="container md:px-[5%] sm:px-[1.5%] px-[5%] mx-auto py-24 md:pt-36 md:pb-28 flex md:flex-row flex-col relative gap-x-16">
+        <div className="flex md:w-[40%] w-full md:sticky md:top-34 h-[32rem] relative">
           <Image fill className="object-cover scale-x-[-1] object-[0%_15%]" src="/hero-1.jpg" alt="Construction Company" />
         </div>
-        <div className="flex flex-col flex-grow flex-1">
+        <div className="flex flex-col flex-grow flex-1 md:mt-0 mt-24">
           <div className="text-sm font-medium leading-none mb-4">About our company</div>
           <div className="leading-tight text-4xl md:text-5xl font-pt-serif tracking-tight mb-8">
             Trusted Groundwork Solutions for <span className="italic mr-2">any</span> Project
@@ -82,7 +94,7 @@ export default function Page() {
         </div>
       </div>
     </div>
-    <div className="container mx-auto px-[5%] py-24 md:pt-36 md:pb-28">
+    <div className="container mx-auto md:px-[5%] sm:px-[1.5%] px-[5%] py-24 md:pt-36 md:pb-28">
       <div className="text-sm font-medium leading-none mb-4 text-primary text-center">Our Services</div>
       <div className="leading-tight text-4xl md:text-5xl font-pt-serif tracking-tight mb-8 text-center">
         Discover Our <span className="italic">Exceptional</span><br /> Engineering Solutions
@@ -92,8 +104,8 @@ export default function Page() {
         <Carousel className="w-[90%]">
           <CarouselContent>
             {Array.from({ length: 5 }).map((_, index) => (
-              <CarouselItem className=' md:basis-1/3 justify-center flex' key={index}>
-                <div className="bg-white text-muted-foreground border-muted-foreground/50 p-8 border w-[90%] md:w-full rounded-sm relative selection:bg-transparent cursor-default">
+              <CarouselItem className='sm:basis-1/2 md:basis-1/3 justify-center flex' key={index}>
+                <div className="bg-white text-muted-foreground border-muted-foreground/50 p-8 border md:w-full rounded-sm relative selection:bg-transparent cursor-default">
                   <div className="h-px w-full bg-neutral/50 my-8"></div>
                   <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight mb-4 text-foreground">
                     The Joke Tax
@@ -106,20 +118,20 @@ export default function Page() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious variant="default" className='-left-9 md:-left-20 rounded-sm p-6' />
-          <CarouselNext variant="default" className='-right-9 md:-right-20 rounded-sm p-6' />
+          <CarouselPrevious variant="default" className='-left-7 md:-left-20 rounded-sm md:p-6' />
+          <CarouselNext variant="default" className='-right-7 md:-right-20 rounded-sm md:p-6' />
         </Carousel>
       </div>
     </div>
-    <div className="bg-neutral px-[5%] text-neutral-foreground shape">
+    <div className="bg-neutral md:px-[5%] sm:px-[1.5%] px-[5%] text-neutral-foreground shape">
       <div className="container mx-auto pb-32 pt-16 md:pt-36 md:pb-48 flex md:flex-row flex-col">
-        <div className="md:w-1/3 w-full">
-
+        <div className="w-1/3 hidden md:block relative">
+          <Image className="absolute -bottom-32 right-1/2 translate-x-1/2" src="/preview.png" alt="Man" height={0} width={mobile ? 150 : 225} />
         </div>
         <div className="md:w-2/3 w-full">
           <div className="text-sm font-medium leading-none mb-4">Get Consultation</div>
           <div className="leading-tight text-3xl sm:text-4xl md:text-5xl font-pt-serif tracking-tight max-w-max mb-8 w-max">
-            Schedule a <span className="italic">free</span> Consultation!
+            Schedule a <span className="italic mr-1">free</span> Consultation!
             <div className="h-px w-full bg-neutral-foreground mt-4"></div>
           </div>
           <Button className={'flex items-center'} size={'lg'}><PhoneCall size={16} />Contact Us</Button>
@@ -127,9 +139,9 @@ export default function Page() {
 
       </div>
     </div>
-    <div className="container mx-auto px-[5%] py-8 md:py-16 max-w-[90%] bg-primary text-primary-foreground translate-y-[-35%] md:translate-y-[-50%] flex md:flex-row flex-wrap items-center rounded-sm justify-between gap-y-8 md:gap-y-16">
+    <div className="container mx-auto px-[5%] py-16 max-w-[90%] bg-primary text-primary-foreground translate-y-[-50%] hidden md:flex items-center rounded-sm justify-between gap-y-16">
       <div>
-        <div className="font-bold text-lg md:text-5xl">800+</div>
+        <div className="font-bold text-lg md:text-5xl"><NumberTicker value={800} startValue={550} />+</div>
         <div className="font-medium text-sm md:text-base leading-7 italic">Projects Completed</div>
       </div>
       <div>
@@ -145,7 +157,7 @@ export default function Page() {
         <div className="font-medium text-sm md:text-base leading-7 italic">Projects Completed</div>
       </div>
     </div>
-    <div className="container mx-auto px-[5%] pb-12 md:pb-28 pt-20">
+    <div className="container mx-auto md:px-[5%] sm:px-[1.5%] px-[5%] py-36">
       <div className="text-sm font-medium leading-none mb-4 text-primary text-center">Testimonials</div>
       <div className="leading-tight text-4xl md:text-5xl font-pt-serif tracking-tight mb-24 text-center">
         What do our <span className="italic">clients</span> say?
@@ -153,13 +165,13 @@ export default function Page() {
       <Testimonials />
     </div>
     <div className="bg-white">
-      <div className="container mx-auto px-[5%] py-24 md:pt-36 md:pb-28">
-        <div className="text-sm font-medium leading-none mb-4 text-primary">Get in touch!</div>
-        <div className="leading-tight text-4xl md:text-5xl font-pt-serif tracking-tight mb-8">
-          Have upcoming <span className="italic">Projects?</span><br /> Let's Talk!
-        </div>
-        <div className="flex md:flex-row flex-col gap-8">
-          <form action="#" method="POST" className=" max-w-xl w-full">
+      <div className="container mx-auto md:px-[5%] sm:px-[1.5%] px-[5%] py-24 md:pt-36 md:pb-28 flex md:flex-row flex-col gap-8">
+        <div className="w-full order-2 md:order-1">
+          <div className="text-sm font-medium leading-none mb-4 text-primary">Get in touch!</div>
+          <div className="leading-tight text-4xl md:text-5xl font-pt-serif tracking-tight mb-8">
+            Have upcoming <span className="italic">Projects?</span><br /> Let's Talk!
+          </div>
+          <form action="#" method="POST" className="max-w-xl w-full">
             <div className="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2">
               <div>
                 <input
@@ -216,13 +228,13 @@ export default function Page() {
               </Button>
             </div>
           </form>
-          <div className="w-full h-64 bg-black">
-
-          </div>
+        </div>
+        <div className="w-full relative md:h-auto h-[32rem] md:order-2 order-1">
+          <Image fill className="object-cover" src="/hero-1.jpg" alt="Construction Company" />
         </div>
       </div>
     </div>
-    <div className="container mx-auto px-[5%] py-24 md:pt-36 md:pb-28">
+    <div className="container mx-auto md:px-[5%] sm:px-[1.5%] px-[5%] py-24 md:pt-36 md:pb-28">
       <div className="text-sm font-medium leading-none mb-4 text-primary text-center">Latest Blogs</div>
       <div className="leading-tight text-4xl md:text-5xl font-pt-serif tracking-tight mb-16 text-center">
         Our latest <br /><span className="italic mr-2">blogs </span> and<span className="italic"> articles</span>
@@ -231,7 +243,7 @@ export default function Page() {
         <Carousel className="w-[90%]">
           <CarouselContent>
             {Array.from({ length: 5 }).map((_, index) => (
-              <CarouselItem className=' md:basis-1/3 justify-center flex' key={index}>
+              <CarouselItem className='sm:basis-1/2 md:basis-[40%] justify-center flex' key={index}>
                 <div className="bg-white text-muted-foreground p-8 w-[90%] md:w-full rounded-sm relative selection:bg-transparent cursor-default">
                   <div className="bg-gray-500 w-full h-64"></div>
                   <div className="h-px w-full bg-neutral/50 my-8"></div>
@@ -249,8 +261,8 @@ export default function Page() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious variant="default" className='-left-9 md:-left-20 rounded-sm p-6' />
-          <CarouselNext variant="default" className='-right-9 md:-right-20 rounded-sm p-6' />
+          <CarouselPrevious variant="default" className='-left-7 md:-left-20 rounded-sm md:p-6' />
+          <CarouselNext variant="default" className='-right-7 md:-right-20 rounded-sm md:p-6' />
         </Carousel>
       </div>
       <div className="w-full flex justify-center"><Button size={'lg'} className='w-max py-6'>View More<ChevronRight size={16} /></Button></div>
