@@ -68,7 +68,7 @@ export default function Page() {
             Many modern groundworks companies prioritize sustainable site preparation by utilizing eco-friendly excavation methods, efficient drainage solutions, and advanced soil stabilization techniques to minimize environmental impact and ensure long-term land durability.
           </p>
           <p className="leading-7 mb-8">
-            Many modern groundworks companies prioritize sustainable site preparation by utilizing eco-friendly excavation methods, efficient drainage solutions, and advanced soil stabilization techniques to minimize environmental impact and ensure long-term land durability. Here, we are proud to offer environmentally conscious groundworks services in NW2 London, delivering smart, reliable, and future-ready solutions tailored to each site's unique needs.
+            Many modern groundworks companies prioritize sustainable site preparation by utilizing eco-friendly excavation methods, efficient drainage solutions, and advanced soil stabilization techniques to minimize environmental impact and ensure long-term land durability. Here, we are proud to offer environmentally conscious groundworks services in NW2 London, delivering smart, reliable, and future-ready solutions tailored to each site&apos;s unique needs.
           </p>
           <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight mb-4">
             The Joke Tax
@@ -169,7 +169,7 @@ export default function Page() {
         <div className="w-full order-2 md:order-1">
           <div className="text-sm font-medium leading-none mb-4 text-primary">Get in touch!</div>
           <div className="leading-tight text-4xl md:text-5xl font-pt-serif tracking-tight mb-8">
-            Have upcoming <span className="italic">Projects?</span><br /> Let's Talk!
+            Have upcoming <span className="italic">Projects?</span><br /> Let&apos;s Talk!
           </div>
           <form action="#" method="POST" className="max-w-xl w-full">
             <div className="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2">

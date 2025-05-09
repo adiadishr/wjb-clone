@@ -5,6 +5,7 @@ import { Mail, Phone, PhoneCall } from "lucide-react";
 import Image from "next/image";
 import { usePathname } from 'next/navigation'
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function Nav() {
   const pathname = usePathname();
@@ -30,12 +31,12 @@ export default function Nav() {
             <Image className="object-cover" src="/logo.webp" height={0} width={100} alt="Logo" />
           </div>
           <div className="lg:flex items-center gap-4 text-gray-900 text-sm font-semibold uppercase hidden">
-            <a href="/" className={cn('duration-300', pathname === '/' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>Home</a>
-            <a href="/about" className={cn('duration-300', pathname === '/about' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>About Us</a>
-            <a href="/contact" className={cn('duration-300', pathname === '/about' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>Services</a>
-            <a href="/contact" className={cn('duration-300', pathname === '/about' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>Portfolio</a>
-            <a href="/contact" className={cn('duration-300', pathname === '/about' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>Privacy Policy</a>
-            <a href="/contact" className={cn('duration-300', pathname === '/about' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>Blogs</a>
+            <Link href="/" className={cn('duration-300', pathname === '/' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>Home</Link>
+            <Link href="/about" className={cn('duration-300', pathname === '/about' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>About Us</Link>
+            <Link href="/contact" className={cn('duration-300', pathname === '/about' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>Services</Link>
+            <Link href="/contact" className={cn('duration-300', pathname === '/about' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>Portfolio</Link>
+            <Link href="/contact" className={cn('duration-300', pathname === '/about' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>Privacy Policy</Link>
+            <Link href="/contact" className={cn('duration-300', pathname === '/about' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>Blogs</Link>
           </div>
           <Button size={'lg'}>Discover More</Button>
         </div>
