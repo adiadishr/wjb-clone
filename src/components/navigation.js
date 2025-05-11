@@ -86,10 +86,20 @@ export default function Nav() {
                     </SheetClose>
                   </div>
                   <SheetFooter>
-                    <div className="flex items-center gap-x-4 justify-end">
-                      <Facebook className="hover:text-white cursor-pointer" size={18.5} />
-                      <Instagram className="hover:text-white cursor-pointer" size={18.5} />
-                      <Linkedin className="hover:text-white cursor-pointer" size={18.5} />
+                    <div className="flex items-center gap-x-4 justify-between">
+                      <SheetClose asChild>
+                        <Link href="/contact">
+                          <Button className="flex duration-500 !pl-10 hover:!pl-3 hover:!pr-10 overflow-hidden items-center group relative">
+                            <ArrowRight className="absolute duration-300 -translate-x-16 group-hover:translate-x-16 group-hover:left-auto" size={16} />
+                            Get a Quote
+                          </Button>
+                        </Link>
+                      </SheetClose>
+                      <div className="flex items-center gap-4">
+                        <Facebook className="cursor-pointer" size={18.5} />
+                        <Instagram className="cursor-pointer" size={18.5} />
+                        <Linkedin className="cursor-pointer" size={18.5} />
+                      </div>
                     </div>
                   </SheetFooter>
                 </SheetContent>
