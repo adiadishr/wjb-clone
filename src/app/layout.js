@@ -2,6 +2,7 @@ import "./globals.css";
 import { geistSans, geistMono, ptSerif } from "@/lib/fonts";
 import Nav from "@/components/navigation";
 import Footer from "@/components/footer";
+import { LenisComponent } from "@/hooks/lenis";
 
 export const metadata = {
   title: "WJB Ground Works",
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${ptSerif.variable} antialiased`}
       >
+        <LenisComponent />
         <Nav />
         {children}
         <Footer />

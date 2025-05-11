@@ -1,9 +1,5 @@
-"use client"
-
 import { Button } from "@/components/ui/button";
 import { BadgeCheck, Binoculars, ChevronRight, PhoneCall } from "lucide-react";
-import Lenis from 'lenis'
-import { useEffect, useState } from 'react'
 import {
   Carousel,
   CarouselContent,
@@ -14,22 +10,15 @@ import {
 import { Testimonials } from "@/components/magicui/marquee";
 import Image from "next/image";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
-import { useIsMobile } from "@/hooks/use-mobile";
 import { NumberTicker } from "@/components/magicui/number-ticker";
+import ContactForm from "@/components/contact-form";
+import Consultation from "@/components/consultation";
 
 export default function Page() {
-  const mobile = useIsMobile();
-  const [mounted, setMounted] = useState(false)
-  useEffect(() => {
-    const lenis = new Lenis({
-      autoRaf: true,
-    });
-
-  }, [])
   return (<>
-    <div className="container mx-auto md:px-[5%] sm:px-[1.5%] px-[5%] mt-[60px] md:mt-[100px] min-h-[calc(100dvh-60px)] md:min-h-[calc(100dvh-100px)] flex flex-col justify-center relative">
+    <div className="container mx-auto px-4 mt-[60px] md:mt-[100px] min-h-[calc(100dvh-60px)] md:min-h-[calc(100dvh-100px)] flex flex-col justify-center relative">
       <FlickeringGrid
-        className="absolute inset-0 z-0 size-full"
+        className="absolute inset-0 -z-10 size-full"
         squareSize={4}
         gridGap={6}
         color="#6B7280"
@@ -51,7 +40,7 @@ export default function Page() {
       </div>
     </div>
     <div className="bg-neutral text-neutral-foreground">
-      <div className="container md:px-[5%] sm:px-[1.5%] px-[5%] mx-auto py-24 md:pt-36 md:pb-28 flex md:flex-row flex-col relative gap-x-16">
+      <div className="container px-4 mx-auto py-24 md:pt-36 md:pb-28 flex md:flex-row flex-col relative gap-x-16">
         <div className="flex md:w-[40%] w-full md:sticky md:top-34 h-[32rem] relative">
           <Image fill className="object-cover scale-x-[-1] object-[0%_15%]" src="/hero-1.jpg" alt="Construction Company" />
         </div>
@@ -60,7 +49,6 @@ export default function Page() {
           <div className="leading-tight text-4xl md:text-5xl font-pt-serif tracking-tight mb-8">
             Trusted Groundwork Solutions for <span className="italic mr-2">any</span> Project
           </div>
-          <div className="h-px w-full bg-neutral-foreground mb-8"></div>
           <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight mb-4">
             The Joke Tax
           </h3>
@@ -94,7 +82,7 @@ export default function Page() {
         </div>
       </div>
     </div>
-    <div className="container mx-auto md:px-[5%] sm:px-[1.5%] px-[5%] py-24 md:pt-36 md:pb-28">
+    <div className="container mx-auto px-4 py-24 md:py-36">
       <div className="text-sm font-medium leading-none mb-4 text-primary text-center">Our Services</div>
       <div className="leading-tight text-4xl md:text-5xl font-pt-serif tracking-tight mb-8 text-center">
         Discover Our <span className="italic">Exceptional</span><br /> Engineering Solutions
@@ -123,118 +111,10 @@ export default function Page() {
         </Carousel>
       </div>
     </div>
-    <div className="bg-neutral md:px-[5%] sm:px-[1.5%] px-[5%] text-neutral-foreground shape">
-      <div className="container mx-auto pb-32 pt-16 md:pt-36 md:pb-48 flex md:flex-row flex-col">
-        <div className="w-1/3 hidden md:block relative">
-          <Image className="absolute -bottom-32 right-1/2 translate-x-1/2" src="/preview.png" alt="Man" height={0} width={mobile ? 150 : 225} />
-        </div>
-        <div className="md:w-2/3 w-full">
-          <div className="text-sm font-medium leading-none mb-4">Get Consultation</div>
-          <div className="leading-tight text-3xl sm:text-4xl md:text-5xl font-pt-serif tracking-tight max-w-max mb-8 w-max">
-            Schedule a <span className="italic mr-1">free</span> Consultation!
-            <div className="h-px w-full bg-neutral-foreground mt-4"></div>
-          </div>
-          <Button className={'flex items-center'} size={'lg'}><PhoneCall size={16} />Contact Us</Button>
-        </div>
-
-      </div>
-    </div>
-    <div className="container mx-auto px-[5%] py-16 max-w-[90%] bg-primary text-primary-foreground translate-y-[-50%] hidden md:flex items-center rounded-sm justify-between gap-y-16">
-      <div>
-        <div className="font-bold text-lg md:text-5xl"><NumberTicker value={800} startValue={550} />+</div>
-        <div className="font-medium text-sm md:text-base leading-7 italic">Projects Completed</div>
-      </div>
-      <div>
-        <div className="font-bold text-lg md:text-5xl">800+</div>
-        <div className="font-medium text-sm md:text-base leading-7 italic">Projects Completed</div>
-      </div>
-      <div>
-        <div className="font-bold text-lg md:text-5xl">800+</div>
-        <div className="font-medium text-sm md:text-base leading-7 italic">Projects Completed</div>
-      </div>
-      <div>
-        <div className="font-bold text-lg md:text-5xl">800+</div>
-        <div className="font-medium text-sm md:text-base leading-7 italic">Projects Completed</div>
-      </div>
-    </div>
-    <div className="container mx-auto md:px-[5%] sm:px-[1.5%] px-[5%] py-36">
-      <div className="text-sm font-medium leading-none mb-4 text-primary text-center">Testimonials</div>
-      <div className="leading-tight text-4xl md:text-5xl font-pt-serif tracking-tight mb-24 text-center">
-        What do our <span className="italic">clients</span> say?
-      </div>
-      <Testimonials />
-    </div>
-    <div className="bg-white">
-      <div className="container mx-auto md:px-[5%] sm:px-[1.5%] px-[5%] py-24 md:pt-36 md:pb-28 flex md:flex-row flex-col gap-8">
-        <div className="w-full order-2 md:order-1">
-          <div className="text-sm font-medium leading-none mb-4 text-primary">Get in touch!</div>
-          <div className="leading-tight text-4xl md:text-5xl font-pt-serif tracking-tight mb-8">
-            Have upcoming <span className="italic">Projects?</span><br /> Let&apos;s Talk!
-          </div>
-          <form action="#" method="POST" className="max-w-xl w-full">
-            <div className="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2">
-              <div>
-                <input
-                  id="full-name"
-                  name="full-name"
-                  type="text"
-                  autoComplete="full-name"
-                  placeholder="Your Name"
-                  className="block w-full rounded-sm tracking-tight bg-white px-4 py-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-primary"
-                />
-              </div>
-              <div>
-                <input
-                  id="company"
-                  name="company"
-                  type="text"
-                  autoComplete="organization"
-                  placeholder="Company"
-                  className="block w-full rounded-sm tracking-tight bg-white px-4 py-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-primary"
-                />
-              </div>
-              <div>
-                <input
-                  id="number"
-                  name="number"
-                  type="number"
-                  autoComplete="phone-number"
-                  placeholder="Phone Number"
-                  className="block w-full rounded-sm tracking-tight bg-white px-4 py-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-primary"
-                />
-              </div>
-              <div>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  placeholder="Email"
-                  className="block w-full rounded-sm tracking-tight bg-white px-4 py-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-primary"
-                />
-              </div>
-              <div className="sm:col-span-2">
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  placeholder="Your Message"
-                  className="block w-full rounded-sm tracking-tight bg-white px-4 py-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-primary"
-                  defaultValue={''}
-                />
-              </div>
-              <Button className='!px-4 !py-6'>
-                Submit Message
-              </Button>
-            </div>
-          </form>
-        </div>
-        <div className="w-full relative md:h-auto h-[32rem] md:order-2 order-1">
-          <Image fill className="object-cover" src="/hero-1.jpg" alt="Construction Company" />
-        </div>
-      </div>
-    </div>
-    <div className="container mx-auto md:px-[5%] sm:px-[1.5%] px-[5%] py-24 md:pt-36 md:pb-28">
+    <Consultation />
+    <Testimonials />
+    <ContactForm />
+    <div className="container mx-auto px-4 py-24 md:py-36">
       <div className="text-sm font-medium leading-none mb-4 text-primary text-center">Latest Blogs</div>
       <div className="leading-tight text-4xl md:text-5xl font-pt-serif tracking-tight mb-16 text-center">
         Our latest <br /><span className="italic mr-2">blogs </span> and<span className="italic"> articles</span>
@@ -245,7 +125,7 @@ export default function Page() {
             {Array.from({ length: 5 }).map((_, index) => (
               <CarouselItem className='sm:basis-1/2 md:basis-[40%] justify-center flex' key={index}>
                 <div className="bg-white text-muted-foreground p-8 w-[90%] md:w-full rounded-sm relative selection:bg-transparent cursor-default">
-                  <div className="bg-gray-500 w-full h-64"></div>
+                  <div className="w-full h-64 relative"><Image fill className="object-cover object-[0%_0%]" src="/hero-1.jpg" alt="Construction Company" /></div>
                   <div className="h-px w-full bg-neutral/50 my-8"></div>
                   <div className="md:text-sm text-xs text-muted-foreground mb-1">
                     21st February, 2024
