@@ -93,7 +93,7 @@ export default function Page() {
           <CarouselContent>
             {Array.from({ length: 5 }).map((_, index) => (
               <CarouselItem className='sm:basis-1/2 md:basis-1/3 justify-center flex' key={index}>
-                <div className="bg-white text-muted-foreground border-muted-foreground/50 p-8 border md:w-full rounded-sm relative selection:bg-transparent cursor-default">
+                <div className="bg-white text-muted-foreground border-muted-foreground/50 p-8 w-[90%] border md:w-full rounded-sm relative selection:bg-transparent cursor-default">
                   <div className="h-px w-full bg-neutral/50 my-8"></div>
                   <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight mb-4 text-foreground">
                     The Joke Tax

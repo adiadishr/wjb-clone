@@ -91,14 +91,15 @@ export default function Page() {
         </p>
       </div>
     </div>
-    <div className="container mx-auto px-4 py-24 md:py-36 flex">
+    <div className="container mx-auto px-4 py-24 md:py-36 flex relative">
+      <Image className="object-cover translate-x-[-1rem] absolute -z-50 lg:block hidden" src="/man_side.webp" alt="Construction Worker" fill />
       <div className="lg:w-1/2 hidden lg:block"></div>
       <div className="lg:w-1/2 w-full">
         <div className="text-sm font-medium leading-none mb-4 text-primary">Company History</div>
-        <div className="leading-tight text-4xl md:text-5xl font-pt-serif tracking-tight mb-12">
+        <div className="leading-tight text-4xl md:text-5xl font-pt-serif tracking-tight mb-16">
           Building <span className="italic mr-1">Strength</span> for a Lasting Future
         </div>
-        <div className="flex flex-col gap-y-8 md:gap-y-12">
+        <div className="flex flex-col gap-y-12">
           <HistoryCard title={'Trusted Groundwork'} subtitle={'Many modern groundworks companies prioritize sustainable site preparation by utilizing eco-friendly excavation methods.'} />
           <HistoryCard title={'Trusted Groundwork'} subtitle={'Many modern groundworks companies prioritize sustainable site preparation by utilizing eco-friendly excavation methods.'} />
           <HistoryCard title={'Trusted Groundwork'} subtitle={'Many modern groundworks companies prioritize sustainable site preparation by utilizing eco-friendly excavation methods.'} />
