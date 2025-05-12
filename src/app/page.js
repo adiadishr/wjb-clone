@@ -33,7 +33,7 @@ export default function Page() {
     <div className="container px-4 mx-auto py-24 md:pt-36 md:pb-28 flex md:flex-row flex-col relative gap-x-16">
       <div data-aos="fade-up" data-aos-once='true' className="flex md:w-[40%] w-full md:sticky md:top-34 h-[32rem] relative">
         <div className="absolute z-10 rotate-[270deg] top-0 right-0 w-0 h-0 border-l-[200px] border-b-[200px] border-l-transparent border-b-primary">
-          <div className="rotate-[135deg] text-center z-20 absolute translate-y-[150%] -translate-x-[120%] text-white font-semibold">10k+ Customer's Satisfied!</div>
+          <div className="rotate-[135deg] text-center z-20 absolute translate-y-[150%] -translate-x-[120%] text-white font-semibold">10k+ Customer&apos;s Satisfied!</div>
         </div>
         <Image fill className="object-cover scale-x-[-1] object-[0%_15%]" src="/hero-1.jpg" alt="Construction Company" />
       </div>
