@@ -1,8 +1,9 @@
 import "./globals.css";
-import { geistSans, geistMono, ptSerif } from "@/lib/fonts";
+import { geistSans, geistMono, ptSerif, poppins } from "@/lib/fonts";
 import Nav from "@/components/navigation";
 import Footer from "@/components/footer";
 import { LenisComponent } from "@/hooks/lenis";
+import UseAOS from "@/hooks/use-aos";
 
 export const metadata = {
   title: "WJB Ground Works",
@@ -10,13 +11,13 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${ptSerif.variable} antialiased`}
+        className={`${geistSans.variable} ${poppins.variable} ${geistMono.variable} ${ptSerif.variable} antialiased`}
       >
         <LenisComponent />
+        <UseAOS />
         <Nav />
         {children}
         <Footer />

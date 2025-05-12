@@ -6,22 +6,22 @@ import { NumberTicker } from "./magicui/number-ticker";
 export default function Consultation() {
   return (<>
     <div className="bg-neutral px-4 text-neutral-foreground">
-      <div className="container mx-auto pb-32 pt-16 md:pt-36 md:pb-48 flex md:flex-row flex-col">
+      <div className="container mx-auto pb-32 pt-16 md:pt-36 md:pb-48 flex md:flex-row flex-col relative">
+        <Image className="z-10 translate-x-[-1rem]" src="/shape.webp" alt="Man" fill />
         <div className="w-1/3 hidden md:block relative">
           <Image className="absolute -bottom-32 right-1/2 translate-x-1/2" src="/preview.png" alt="Man" height={0} width={225} />
         </div>
-        <div className="md:w-2/3 w-full">
+        <div className="md:w-2/3 z-20 w-full">
           <div className="text-sm font-medium leading-none mb-4">Get Consultation</div>
-          <div className="leading-tight text-3xl sm:text-4xl md:text-5xl font-pt-serif tracking-tight max-w-max mb-8 w-max">
+          <div className="leading-tight text-3xl sm:text-4xl md:text-5xl tracking-tight max-w-max mb-8 w-max">
             Schedule a <span className="italic mr-1">free</span> Consultation!
-            <div className="h-px w-full bg-neutral-foreground mt-4"></div>
           </div>
           <Button className={'flex items-center'} size={'lg'}><PhoneCall size={16} />Contact Us</Button>
         </div>
       </div>
     </div>
-    <div className="container mx-auto px-4 hidden md:flex">
-      <div className="p-12 w-full bg-primary text-primary-foreground hidden md:flex items-center rounded-sm justify-between gap-y-16 translate-y-[-50%]">
+    <div className="container mx-auto px-4 z-30 hidden md:flex">
+      <div className="p-12 w-full bg-primary z-30 text-primary-foreground hidden md:flex items-center rounded-sm justify-between gap-y-16 translate-y-[-50%]">
         <div>
           <div className="font-bold text-lg md:text-5xl"><NumberTicker value={800} startValue={550} />+</div>
           <div className="font-medium text-sm md:text-base leading-7 italic">Projects Completed</div>

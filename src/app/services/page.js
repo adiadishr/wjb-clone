@@ -1,6 +1,7 @@
 import AuxHero from "@/components/aux-hero";
 import ContactForm from "@/components/contact-form";
-import { ChevronRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export default function Page() {
   return (<>
@@ -10,17 +11,19 @@ export default function Page() {
       <div className="leading-tight text-4xl md:text-5xl font-pt-serif tracking-tight mb-24 text-center">
         Discover Our <span className="italic">Exceptional</span><br /> Engineering Solutions
       </div>
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center gap-8">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 items-center gap-8">
         {Array.from({ length: 5 }).map((_, index) => (
-          <div key={index} className="bg-white text-muted-foreground border-muted-foreground/50 p-8 col-span-1 border md:w-full rounded-sm relative selection:bg-transparent cursor-default">
-            <div className="h-px w-full bg-neutral/50 my-8"></div>
-            <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight mb-4 text-foreground">
-              The Joke Tax
-            </h3>
-            <p className="leading-7 mb-6">
-              Many modern groundworks companies prioritize sustainable site preparation by utilizing eco-friendly excavation methods, efficient drainage solutions
-            </p>
-            <div className="absolute top-6 right-8 flex items-center gap-1 hover:underline underline-offset-4 cursor-pointer text-sm md:text-base">Read More <span><ChevronRight size={16} /></span></div>
+          <div key={index} className="bg-white z-10 p-8 col-span-1 relative cursor-pointer group overflow-hidden h-96 md:h-72">
+            <Image fill className="object-cover group-hover:saturate-[75%] saturate-0 duration-[600ms] ease-quart group-hover:scale-110 -z-10 pointer-events-none selection:bg-transparent group-hover:blur-[2px]" alt="background" src="/grounds.webp" />
+            <div className="z-10 flex flex-col justify-end h-full">
+              <h3 className="scroll-m-20 text-4xl font-semibold tracking-tight mb-4 text-background group-hover:text-white">
+                The Joke Tax
+              </h3>
+              <p className="leading-7 mb-[-9rem] md:mb-[-7rem] duration-500 ease-quart group-hover:mb-0 text-white">
+                Many modern groundworks companies prioritize sustainable site preparation by utilizing eco-friendly excavation methods, efficient drainage solutions
+              </p>
+              <ArrowRight className="absolute top-8 right-8 text-background group-hover:text-white duration-300 group-hover:rotate-[-45deg]" size={24} strokeWidth={2} />
+            </div>
           </div>
         ))}
       </div>
