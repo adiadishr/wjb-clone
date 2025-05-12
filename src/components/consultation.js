@@ -9,12 +9,12 @@ export default function Consultation() {
       <div className="container mx-auto pb-32 pt-16 md:pt-36 md:pb-48 flex md:flex-row flex-col relative">
         <Image className="z-10 translate-x-[-1rem]" src="/shape.webp" alt="Man" fill />
         <div className="w-1/3 hidden md:block relative">
-          <Image className="absolute -bottom-32 right-1/2 translate-x-1/2" src="/preview.png" alt="Man" height={0} width={225} />
+          <Image className="absolute -bottom-32 right-1/2 translate-x-1/2" src="/woman.webp" alt="Construction Worker Smiling" height={0} width={280} />
         </div>
         <div className="md:w-2/3 z-20 w-full">
           <div className="text-sm font-medium leading-none mb-4">Get Consultation</div>
-          <div className="leading-tight text-3xl sm:text-4xl md:text-5xl tracking-tight max-w-max mb-8 w-max">
-            Schedule a <span className="italic mr-1">free</span> Consultation!
+          <div className="leading-tight text-3xl sm:text-4xl font-semibold md:text-5xl tracking-tight max-w-max mb-8 w-max">
+            Schedule a free Consultation!
           </div>
           <Button className={'flex items-center'} size={'lg'}><PhoneCall size={16} />Contact Us</Button>
         </div>
