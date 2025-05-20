@@ -1,5 +1,5 @@
 import "./globals.css";
-import { geistSans, geistMono, ptSerif, poppins } from "@/lib/fonts";
+import { geistSans, geistMono, ptSerif, titiliumWeb } from "@/lib/fonts";
 import Nav from "@/components/navigation";
 import Footer from "@/components/footer";
 import { LenisComponent } from "@/hooks/lenis";
@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${poppins.variable} ${geistMono.variable} ${ptSerif.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${ptSerif.variable} ${titiliumWeb.variable} antialiased`}
       >
         <LenisComponent />
         <UseAOS />

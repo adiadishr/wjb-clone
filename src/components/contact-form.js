@@ -3,14 +3,38 @@ import { Button } from "./ui/button";
 
 export default function ContactForm() {
   return (
-    <div className="bg-white">
-      <div className="container mx-auto px-4 py-24 md:py-36 flex md:flex-row flex-col gap-8">
-        <div className="w-full order-2 md:order-1">
-          <div className="text-sm font-medium leading-none mb-4 text-primary">Get in touch!</div>
-          <div className="leading-tight text-4xl md:text-5xl font-pt-serif tracking-tight mb-8">
-            Have upcoming <span className="italic">Projects?</span><br /> Let&apos;s Talk!
+    <div className="bg-white overflow-hidden">
+      <div
+        className="container mx-auto w-[90%] py-24 md:py-36 flex md:flex-row flex-col gap-8"
+      >
+        {/* Text & Form */}
+        <div
+          className="w-full order-2 md:order-1"
+          data-aos="fade-down"
+          data-aos-delay="100"
+        >
+          <div
+            className="text-sm font-medium leading-none mb-4 text-primary"
+            data-aos="fade-down"
+            data-aos-delay="200"
+          >
+            Get in touch!
           </div>
-          <form action="#" method="POST" className="max-w-xl w-full">
+          <div
+            className="leading-tight text-4xl md:text-5xl font-semibold tracking-tight mb-8"
+            data-aos="fade-down"
+            data-aos-delay="300"
+          >
+            Have upcoming <span className="italic">Projects?</span>
+            <br /> Let&apos;s Talk!
+          </div>
+          <form
+            action="#"
+            method="POST"
+            className="max-w-xl w-full"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <div className="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2">
               <div>
                 <input
@@ -62,16 +86,31 @@ export default function ContactForm() {
                   defaultValue={''}
                 />
               </div>
-              <Button className='!px-4 !py-6'>
+              <Button
+                className="!px-4 !py-6"
+                data-aos="fade-up"
+                data-aos-offset="-200"
+              >
                 Submit Message
               </Button>
             </div>
           </form>
         </div>
-        <div className="w-full relative md:h-auto h-[32rem] md:order-2 order-1">
-          <Image fill className="object-cover" src="/hero-1.jpg" alt="Construction Company" />
+
+        {/* Image */}
+        <div
+          className="relative md:h-auto h-[32rem] md:order-2 order-1 md:w-[80%] justify-end"
+          data-aos="fade-left"
+          data-aos-delay="200"
+        >
+          <Image
+            fill
+            className="object-cover"
+            src="/form.jpeg"
+            alt="Construction Company"
+          />
         </div>
       </div>
     </div>
-  )
+  );
 }

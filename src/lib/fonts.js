@@ -1,10 +1,16 @@
-import { Geist, Geist_Mono, Poppins, PT_Serif } from "next/font/google";
+import { Geist, Geist_Mono, PT_Serif, Titillium_Web } from "next/font/google";
 
 export const ptSerif = PT_Serif({
   variable: "--font-pt-serif",
   subsets: ["latin"],
   weight: ["400", "700"],
 });
+
+export const titiliumWeb = Titillium_Web({
+  variable: "--font-titilium-web",
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "600", "700", "900"],
+})
 
 export const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,10 +20,4 @@ export const geistSans = Geist({
 export const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-});
-
-export const poppins = Poppins({
-  variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });

@@ -7,7 +7,6 @@ export default function Page() {
   return (<>
     <AuxHero title={'Services'} />
     <Services page />
-    <TimelineDemo />
   </>
   )
 }
