@@ -3,7 +3,7 @@
 import Lenis from 'lenis';
 import { useEffect } from "react";
 
-export function UseLenis() {
+export function LenisComponent() {
   useEffect(() => {
     const lenis = new Lenis({
       autoRaf: true,
