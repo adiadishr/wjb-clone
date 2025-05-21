@@ -1,83 +1,87 @@
-import { Button } from "@/components/ui/button";
-import { Binoculars, PhoneCall } from "lucide-react";
-import { Testimonials } from "@/components/magicui/marquee";
+import Nav from "@/components/navigation";
+import { ArrowRight, Box, CircleUserRound, LucideHome, PhoneCall } from "lucide-react";
 import Image from "next/image";
-import ContactForm from "@/components/contact-form";
-import Consultation from "@/components/consultation";
-import Services from "@/components/services";
-import { TimelineDemo } from "@/components/timeline";
-import Blogs from "@/components/blogs";
 
-export default function Page() {
+export default function Home() {
   return (<>
-    <div className="relative overflow-hidden">
-      <div className="container mx-auto w-[90%] px-4 mt-[60px] md:mt-[100px] min-h-[calc(100dvh-60px)] md:min-h-[calc(100dvh-100px)] flex flex-col justify-center relative">
-        <Image data-aos="fade-right" fill className="-translate-x-[10%] -z-10 object-cover object-[0%_0%]" src="/hero-shape.webp" alt="Construction Company" />
-        <div data-aos="fade-up" className="md:text-left leading-tight text-center font-semibold text-4xl md:text-5xl tracking-tight mb-4">
-          From blueprint, <br />to Brilliance.
+    <Nav />
+    {/* Hero */}
+    <div className="p-4">
+      <div className="relative flex flex-col justify-center w-full h-[calc(85dvh-2rem)] p-4 md:h-[calc(100dvh-2rem)] px-8 overflow-hidden text-white rounded-4xl">
+        <Image className="object-cover -z-10 scale-x-[1] object-[50%_75%] md:object-[0%_75%]" src="/hero-5.jpg" fill alt="Background" />
+        <div className="absolute inset-0 w-full h-full bg-black/50 -z-10"></div>
+        <div className="relative size-24 mx-auto">
+          <Image
+            fill
+            alt="logo"
+            className="object-contain"
+            src="/logo-top.png"
+          />
         </div>
-        <div data-aos="fade-up" data-aos-delay="150" className="text-muted-foreground md:text-left text-center max-w-lg text-lg/7 mb-8">
-          We help deliver solutions in site preparation, excavation, foundations, drainage and civil engineering.
+        <div className="text-center headline">
+          Matching Talent,<br />With Opportunity
         </div>
-        <div data-aos="fade-up" data-aos-delay="300" className="flex gap-4 md:justify-start justify-center">
-          <Button size={'lg'}><Binoculars size={16} />Discover More</Button>
-          <Button size={'lg'} variant={'outline'}><PhoneCall size={16} />Book a Call</Button>
+        <div className="flex items-center justify-between w-full py-8 absolute bottom-0 pr-12">
+          <div>A Forbes Best Recruitment Company <br /> & Trusted Partner <span className="font-bold ">In Your Success</span></div>
+          <div className="relative flex items-center justify-center p-4 overflow-hidden text-black bg-white rounded-full hover:animate-spin">
+            <ArrowRight size={16} />
+          </div>
         </div>
-        <div data-aos="fade-left" className="w-0 hidden h-[calc(100dvh-100px)] md:block absolute right-0 grow md:w-5/12">
+      </div >
+    </div >
+    {/* About */}
+    <div className="container w-[90%] py-20 mx-auto lg:py-40">
+      <div className="relative flex flex-col w-full h-full lg:flex-row gap-x-12 gap-y-12">
+        {/* 1st Sibling */}
+        <div className="basis-full lg:basis-1/2 lg:order-1 order-2">
+          <div className="relative h-96 lg:h-full w-full overflow-hidden rounded-2xl lg:rounded-4xl">
+            <Image className="object-cover" src="/hero-4.jpg" fill alt="Background" />
+          </div>
         </div>
-      </div>
-      <div data-aos='fade-left' data-aos-duration='2000' className="absolute right-0 top-0 h-full w-1/2">
-        <Image fill className="object-cover object-[50%_50%] absolute right-0 top-0" src="/hero.jpeg" alt="Construction Company" />
+        {/* 2nd Sibling */}
+        <div className="flex flex-col order-1 lg:basis-1/2 basis-full lg:order-2">
+          <div className="px-3 font-normal tracking-tighter py-0.5 border rounded-full border-black/20 w-max mb-6">About Us</div>
+          <div className="mb-8 headline">Empowering Global Workforce with <span className="text-orange-400">Skilled Nepalese</span> Talent</div>
+          <div className="mb-3 text-base/7">
+            Asia Recruitment Nepal is a truly independant human resource consultancy which supplies Nepalese skilled, semiskilled, technical and professional human resources abroad.
+          </div>
+          <div className="text-base/7">
+            Asia Recruitment Nepal is a truly independant human resource consultancy which supplies Nepalese skilled, semiskilled, technical and professional human resources abroad.
+          </div>
+        </div>
       </div>
     </div>
-    {/* <div className="container w-[90%] px-4 mx-auto py-24 md:pt-36 md:pb-28 flex md:flex-row flex-col relative gap-x-16">
-      <div data-aos="fade-up" className="flex md:w-[40%] w-full md:sticky md:top-34 h-[32rem] relative">
-        <div className="absolute z-10 rotate-[270deg] top-0 right-0 w-0 h-0 border-l-[200px] border-b-[200px] border-l-transparent border-b-primary">
-          <div className="rotate-[135deg] text-center z-20 absolute translate-y-[150%] -translate-x-[120%] text-white font-semibold">10k+ Customer&apos;s Satisfied!</div>
+    {/* Why Nepalese */}
+    < div className="container w-[90%] py-20 mx-auto md:py-40 bg-neutral-50" >
+      <div className="mb-4 text-center headline">So, why hire from Nepal?</div>
+      <div className="max-w-3xl mx-auto mb-8 text-center md:mb-16 md:text-lg/7">Over the past one and a half decade, an increasing number of employers from different countries are showing their keen interest in hiring Professionals from Nepal.</div>
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
+        <div className="relative z-10 w-full p-4 overflow-hidden text-white h-80 rounded-3xl">
+          <div className="absolute inset-0 -z-10 bg-black/50"></div>
+          <Image src="/hero-1.jpg" className="object-cover -z-20" fill alt="Card" />
+          <div className="flex flex-col justify-between h-full">
+            <div className="text-5xl ">01</div>
+            <div className="">Nepali workers are eminent for their hard work, high sense of responsibility and discipline.</div>
+          </div>
         </div>
-        <Image fill className="object-cover scale-x-[-1] object-[50%_15%]" src="/machine.jpeg" alt="Construction Company" />
+        <div className="relative z-10 w-full p-4 overflow-hidden text-white h-80 rounded-3xl">
+          <div className="absolute inset-0 -z-10 bg-black/50"></div>
+          <Image src="/hero.jpg" className="object-cover -z-20" fill alt="Card" />
+          <div className="flex flex-col justify-between h-full">
+            <div className="text-5xl ">02</div>
+            <div className="">Nepali professionals are known for their strong work ethic and devotion to their duties.</div>
+          </div>
+        </div>
+        <div className="relative z-10 w-full p-4 overflow-hidden text-white h-80 rounded-3xl">
+          <div className="absolute inset-0 -z-10 bg-black/50"></div>
+          <Image src="/hero-3.jpg" className="object-cover -z-20" fill alt="Card" />
+          <div className="flex flex-col justify-between h-full">
+            <div className="text-5xl ">03</div>
+            <div className="">Procedures and formalities for recruiting Nepali employees are simple.</div>
+          </div>
+        </div>
       </div>
-      <div data-aos="fade-up" className="flex flex-col flex-grow flex-1 md:mt-0 mt-24">
-        <div className="font-medium text-primary leading-none mb-4">About our company</div>
-        <div className="leading-tight text-4xl md:text-5xl font-semibold tracking-tight mb-8">
-          Trusted Groundwork Solutions for <span className="italic mr-2">any</span> Project
-        </div>
-        <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight mb-4">
-          The Joke Tax
-        </h3>
-        <div>
-          <p className="leading-7 text-paragraph mb-6">
-            Many modern groundworks companies prioritize sustainable site preparation by utilizing eco-friendly excavation methods, efficient drainage solutions, and advanced soil stabilization techniques to minimize environmental impact and ensure long-term land durability.
-          </p>
-          <p className="leading-7 text-paragraph mb-8">
-            Many modern groundworks companies prioritize sustainable site preparation by utilizing eco-friendly excavation methods, efficient drainage solutions, and advanced soil stabilization techniques to minimize environmental impact and ensure long-term land durability. Here, we are proud to offer environmentally conscious groundworks services in NW2 London, delivering smart, reliable, and future-ready solutions tailored to each site&apos;s unique needs.
-          </p>
-        </div>
-        <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight mb-4">
-          The Joke Tax
-        </h3>
-        <p className="leading-7 text-paragraph mb-6">
-          Many modern groundworks companies prioritize sustainable site preparation by utilizing eco-friendly excavation methods, efficient drainage solutions, and advanced soil stabilization techniques to minimize environmental impact and ensure long-term land durability.
-        </p>
-        <div className="leading-7 mb-8 flex flex-wrap gap-x-4 gap-y-4">
-          <div>
-            <BadgeCheck className="inline-block mr-2" stroke="white" fill="oklch(0.705 0.213 47.604)" size={32} /> 260+ Projects Completed
-          </div>
-          <div>
-            <BadgeCheck className="inline-block mr-2" stroke="white" fill="oklch(0.705 0.213 47.604)" size={32} /> 260+ Projects Completed
-          </div>
-          <div>
-            <BadgeCheck className="inline-block mr-2" stroke="white" fill="oklch(0.705 0.213 47.604)" size={32} /> 260+ Projects Completed
-          </div>
-        </div>
-        <Button className='w-max'>Learn More<ChevronRight size={16} /></Button>
-      </div>
-    </div> */}
-    <Services />
-    <Consultation />
-    <Testimonials />
-    <TimelineDemo />
-    <Blogs />
-    <ContactForm />
+    </div >
+    {/*  */}
   </>)
 }
