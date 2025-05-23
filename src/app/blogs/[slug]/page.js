@@ -34,7 +34,7 @@ export default async function Page({ params }) {
                                 <div className="bg-neutral-100 absolute -top-2 -left-2 p-2">
                                     <Quote size={20} fill="var(--primary)" stroke="var(--primary)" className="scale-x-[-1]" />
                                 </div>
-                                <div className="text-paragraph font-light italic mt-2">"Building sustainably is not just a choice; it’s a responsibility. Thoughtful groundwork practices today create a resilient environment for tomorrow."</div>
+                                <div className="text-paragraph font-light italic mt-2">"Building sustainably is not just a choice; it&aps;s a responsibility. Thoughtful groundwork practices today create a resilient environment for tomorrow."</div>
                             </div>
                             <div className="text-base/7 text-paragraph">{blog.content}</div>
                             <div className="text-2xl font-medium tracking-tight">{blog.title}</div>
