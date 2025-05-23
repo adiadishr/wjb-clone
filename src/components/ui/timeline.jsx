@@ -28,13 +28,13 @@ export const Timeline = ({
     (<div
       className="w-full bg-white"
       ref={containerRef}>
-      <div className="container mx-auto w-[90%] pt-24 md:pt-48">
+      <div className="container mx-auto w-[80%] pt-24 md:pt-48">
         <div data-aos='fade-up' className="text-sm font-medium leading-none mb-4 text-primary text-center">How it works</div>
         <div data-aos='fade-up' data-aos-delay='100' className={`leading-tight text-4xl md:text-5xl font-semibold tracking-tight text-center mb-8`}>
           Here's how it all <span className="italic">works</span>
         </div>
       </div>
-      <div ref={ref} className="relative container w-[90%] mx-auto pb-48 md:mt-[-2rem]">
+      <div ref={ref} className="relative container w-[80%] mx-auto pb-48 md:mt-[-2rem]">
         {data.map((item, index) => (
           <div key={index} className="flex justify-start pt-10 md:pt-36 md:gap-10">
             <div

@@ -76,7 +76,7 @@ export default function FlyoutLink({ href, pathname }) {
 
 const Content = () => {
     return (
-        <div className="w-64 bg-white p-6 shadow-xl">
+        <div className="w-64 bg-white p-6 shadow-xl border-b border-primary">
             <div className="mb-3 space-y-3">
                 <h3 className="font-semibold">Services at Hayes</h3>
                 {services.map((service, idx) => (

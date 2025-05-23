@@ -5,7 +5,7 @@ export default function ContactForm() {
   return (
     <div className="bg-white overflow-hidden">
       <div
-        className="container mx-auto w-[90%] py-24 md:py-36 flex md:flex-row flex-col gap-8"
+        className="container mx-auto w-[80%] py-24 md:py-36 flex md:flex-row flex-col gap-8"
       >
         {/* Text & Form */}
         <div

@@ -1,5 +1,6 @@
 export const blogs = [
     {
+        "delay": "150",
         "src": "/mad-max.jpeg",
         "by": "Charlotte Evans",
         "tag": "Bridge Engineering",
@@ -9,6 +10,7 @@ export const blogs = [
         "content": "Explore the latest advances in steel-and-composite bridge design used on the new Thames crossings. From aerodynamic deck profiles to corrosion-resistant coatings, we look at how engineers are extending service life and improving load capacity in urban environments."
     },
     {
+        "delay": "300",
         "src": "/portrait.jpeg",
         "by": "Owen Patel",
         "tag": "Sustainable Drainage",
@@ -18,6 +20,7 @@ export const blogs = [
         "content": "Sustainable Urban Drainage Systems (SuDS) are transforming how we manage stormwater in London and Manchester. This post covers permeable paving, green roofs and retention basins—showing real UK project case studies and regulatory considerations."
     },
     {
+        "delay": "450",
         "src": "/machine.jpeg",
         "by": "Rebecca Singh",
         "tag": "Highway Engineering",
@@ -27,6 +30,7 @@ export const blogs = [
         "content": "Maintaining the M1 motorway demands careful coordination to minimise disruption. We dive into night-time resurfacing techniques, innovative traffic management plans, and new polymer-modified asphalts that are extending pavement life."
     },
     {
+        "delay": "150",
         "src": "/silhouette.jpeg",
         "by": "Liam Thompson",
         "tag": "Foundation Works",

@@ -119,4 +119,9 @@
   body {
     @apply bg-background text-foreground font-sans;
   }
+
+  .cta {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+  }
 }

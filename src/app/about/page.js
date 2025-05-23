@@ -1,7 +1,6 @@
 'use client'
 
 import AuxHero from "@/components/aux-hero";
-import ContactForm from "@/components/contact-form";
 import HistoryCard from "@/components/history-card";
 import { NumberTicker } from "@/components/magicui/number-ticker";
 import { BadgeCheck, ChevronRight } from "lucide-react";
@@ -11,12 +10,12 @@ export default function Page() {
   return (<>
     <AuxHero title={'About Us'} />
     <div className="bg-white">
-      <div className="container w-[90%] mx-auto py-24 md:pt-36 md:pb-28 flex md:flex-row flex-col relative gap-x-16">
-        <div data-aos="fade-up" className="flex md:w-[40%] w-full md:sticky md:top-34 h-[32rem] relative">
+      <div className="container w-[90%] md:w-[85%] mx-auto py-24 md:pt-36 md:pb-28 flex md:flex-row flex-col relative gap-x-16">
+        <div data-aos="fade-up" className="flex md:w-[40%] w-full md:sticky md:top-34 h-[40rem] relative">
           <div className="absolute z-10 rotate-[270deg] top-0 right-0 w-0 h-0 border-l-[200px] border-b-[200px] border-l-transparent border-b-primary">
             <div className="rotate-[135deg] text-center z-20 absolute translate-y-[150%] -translate-x-[120%] text-white font-semibold">10k+ Customer&apos;s Satisfied!</div>
           </div>
-          <Image fill className="object-cover scale-x-[-1] object-[0%_15%]" src="/hero-1.jpg" alt="Construction Company" />
+          <Image fill className="object-cover scale-x-[-1] object-[0%_15%]" src="/machine.jpeg" alt="Construction Company" />
         </div>
         <div className="flex flex-col flex-grow flex-1 md:mt-0 mt-24">
           <div data-aos="fade-up">
@@ -44,7 +43,7 @@ export default function Page() {
               Many modern groundworks companies prioritize sustainable site preparation by utilizing eco-friendly excavation methods, efficient drainage solutions, and advanced soil stabilization techniques to minimize environmental impact and ensure long-term land durability.
             </p>
           </div>
-          <div className="leading-7 mb-8 flex flex-wrap gap-x-4 gap-y-4">
+          <div className="leading-7 flex flex-wrap gap-x-4 gap-y-4">
             <div data-aos="fade-up" data-aos-delay='250'>
               <BadgeCheck className="inline-block mr-2" stroke="white" fill="oklch(0.705 0.213 47.604)" size={32} /> 260+ Projects Completed
             </div>
@@ -81,7 +80,7 @@ export default function Page() {
       </div>
     </div>
     <div className="bg-white">
-      <div className="container mx-auto px-4 py-24 md:py-36">
+      <div className="container mx-auto w-[90%] md:w-[85%] py-24 md:py-36">
         <div data-aos='fade-up' className="text-sm text-center font-medium leading-none mb-4 text-primary mx-auto max-w-xl">Who are we?</div>
         <div data-aos='fade-up' className="leading-tight text-center text-3xl sm:text-4xl md:text-5xl font-pt-serif tracking-tight mb-8 mx-auto max-w-xl">
           A message from <span className="italic mr-1">the CEO</span>
@@ -96,8 +95,8 @@ export default function Page() {
         </p>
       </div>
     </div>
-    <div className="container mx-auto w-[90%] py-24 md:py-36 flex relative">
-      <Image data-aos='fade-up' className="object-cover translate-x-[-1rem] absolute -z-50 lg:block hidden" src="/man_side.webp" alt="Construction Worker" fill />
+    <div className="container mx-auto w-[90%] md:w-[85%] py-24 md:py-36 flex relative">
+      <Image data-aos='fade-up' className="object-cover translate-x-[-10%] absolute -z-50 lg:block hidden" src="/man_side.webp" alt="Construction Worker" fill />
       <div className="lg:w-1/2 hidden lg:block"></div>
       <div className="lg:w-1/2 w-full">
         <div data-aos='fade-up' className="text-sm font-medium leading-none mb-4 text-primary">Company History</div>
