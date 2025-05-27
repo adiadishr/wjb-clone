@@ -20,14 +20,13 @@ export default function Services({ page }) {
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 items-center gap-8">
           {services.map((service, index) => (
             <Link href={`/services/${service.slug}`} data-aos='fade-up' data-aos-delay={`${100 + (index * 50)}`} key={index} className="bg-white z-10 p-8 col-span-1 relative cursor-pointer group overflow-hidden h-96 md:h-72">
-              <Image fill className="object-cover group-hover:saturate-100 transition-all saturate-0 duration-[600ms] ease-quart group-hover:scale-110 -z-20 pointer-events-none selection:bg-transparent" alt="background" src={service.src} />
+              <Image fill className="object-cover group-hover:saturate-100 transition-all saturate-100 md:saturate-0 duration-[600ms] ease-quart group-hover:scale-110 -z-20 pointer-events-none selection:bg-transparent" alt="background" src={service.src} />
               <div className="inset-0 bg-black/35 absolute -z-10"></div>
-              {/* <div className="absoute -z-50 h-full w-full scale-x-120 scale-y-110"></div> */}
               <div className="z-20 static flex flex-col justify-end h-full">
                 <h3 className="scroll-m-20 text-2xl md:text-4xl font-semibold tracking-tight mb-4 text-background group-hover:text-white">
                   {service.title}
                 </h3>
-                <p className="leading-5 md:leading-7 text-sm md:text-base line-clamp-2 mb-[-4.5rem] md:mb-[-5rem] duration-500 ease-quart group-hover:mb-0 text-white">
+                <p className="leading-5 md:leading-7 text-sm md:text-base line-clamp-2 md:mb-[-5rem] duration-500 ease-quart group-hover:mb-0 text-white">
                   {service.description}
                 </p>
                 <ArrowRight className="absolute top-8 right-8 text-background group-hover:text-white duration-300 group-hover:rotate-[-45deg]" size={24} strokeWidth={4} />

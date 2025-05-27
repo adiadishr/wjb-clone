@@ -1,7 +1,7 @@
 'use client';
 
 import { cn } from "@/lib/utils";
-import { ArrowRight, Facebook, Instagram, Linkedin, Mail, MapPin, Menu, PhoneCall, Plus } from "lucide-react";
+import { ArrowRight, Facebook, Instagram, Linkedin, Menu } from "lucide-react";
 import Image from "next/image";
 import { usePathname } from 'next/navigation'
 import { Button } from "./ui/button";
@@ -10,7 +10,6 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
   SheetFooter,
   SheetHeader,
   SheetTitle,
@@ -22,12 +21,12 @@ export default function Nav() {
   const pathname = usePathname();
   return (
     <div className="fixed top-0 w-full z-50">
-      <nav className="max-h-[100px] h-[100px] bg-white">
-        <div className="container mx-auto flex items-center h-full justify-between w-[00%] md:w-[85%]">
+      <nav className="max-h-[100px] h-[100px] bg-white/80 backdrop-blur">
+        <div className="container mx-auto flex items-center h-full justify-between w-[90%] md:w-[85%]">
           <div className="flex gap-24">
-            <div className="relative">
+            <Link href="/" className="relative">
               <Image className="object-cover" src="/logo.png" height={0} width={120} alt="Logo" />
-            </div>
+            </Link>
             <div className="lg:flex items-center gap-4 text-gray-900 uppercase hidden">
               <Link href="/" className={cn('duration-300', pathname === '/' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>Home</Link>
               <Link href="/about" className={cn('duration-300', pathname === '/about' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>About Us</Link>
@@ -64,7 +63,7 @@ export default function Nav() {
                       <Link href="/services" className={cn('duration-300', pathname === '/services' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>Services</Link>
                     </SheetClose>
                     <SheetClose asChild>
-                      <Link href="/projects" className={cn('duration-300', pathname === '/about' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>projects</Link>
+                      <Link href="/projects" className={cn('duration-300', pathname === '/about' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>Projects</Link>
                     </SheetClose>
                     <SheetClose asChild>
                       <Link href="/blogs" className={cn('duration-300', pathname === '/blogs' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>Blogs</Link>

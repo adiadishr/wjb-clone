@@ -6,7 +6,7 @@ import { NumberTicker } from "./magicui/number-ticker";
 export default function Consultation() {
   return (<>
     <div data-aos='fade-up' className="bg-neutral text-neutral-foreground">
-      <div className="container w-[90%] mx-auto pb-32 pt-16 md:pt-36 md:pb-48 flex md:flex-row flex-col relative">
+      <div className="container w-[90%] mx-auto py-20 md:pt-36 md:pb-48 flex md:flex-row flex-col relative">
         <Image className="z-10 translate-x-[-1rem]" src="/shape.webp" alt="Man" fill />
         <div data-aos='flip-right' className="w-1/3 hidden md:block relative">
           <Image className="absolute -bottom-32 right-1/2 translate-x-1/2" src="/woman.webp" alt="Construction Worker Smiling" height={0} width={280} />

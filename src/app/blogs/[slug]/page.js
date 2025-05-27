@@ -1,7 +1,7 @@
 import AuxHero from "@/components/aux-hero";
 import { blogs } from "@/constants/blogs";
 import { services } from "@/constants/services";
-import { Link2, Calendar, User, Tag, ArrowRight, Quote, BadgeCheck } from "lucide-react";
+import { Link2, Calendar, User, Tag, ArrowRight, Quote, BadgeCheck, ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -22,8 +22,11 @@ export default async function Page({ params }) {
                         <div className="relative w-full h-[36rem]">
                             <Image className="object-cover" fill alt={blog.title} src={blog.src} />
                         </div>
-                        <div className="bg-neutral-100 p-8 flex flex-col gap-y-6">
-                            <div className="flex items-center flex-wrap gap-4">
+                        <div className="bg-neutral-100 relative p-8 flex flex-col gap-y-6">
+                            <Link href="/blogs" className="absolute top-8 right-8 flex gap-2 py-2 px-4 bg-primary items-center text-white">
+                                Go Back<ArrowLeft size={16} />
+                            </Link>
+                            <div className="flex items-center flex-wrap gap-4 md:w-full w-2/3">
                                 <div className="flex items-center gap-2 text-muted-foreground"><Calendar size={16} fill="var(--primary)" stroke="white" />{blog.date}</div>
                                 <div className="flex items-center gap-2 text-muted-foreground"><User size={16} fill="var(--primary)" stroke="var(--primary)" />{blog.by}</div>
                                 <div className="flex items-center gap-2 text-muted-foreground"><Tag size={16} fill="var(--primary)" stroke="var(--primary)" />{blog.tag}</div>

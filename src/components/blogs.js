@@ -34,7 +34,7 @@ export default function Blogs({ page }) {
                                         </div>
                                         <div className="bg-white p-8 w-full">
                                             <div className="flex flex-col gap-4">
-                                                <div className="flex gap-4">
+                                                <div className="flex flex-wrap gap-x-4 gap-y-2">
                                                     <div className="flex items-center gap-2 text-muted-foreground"><User size={16} fill="var(--primary)" stroke="var(--primary)" />{blog.by}</div>
                                                     <div className="flex items-center gap-2 text-muted-foreground"><Tag size={16} fill="var(--primary)" stroke="var(--primary)" />{blog.tag}</div>
                                                 </div>
@@ -65,7 +65,7 @@ export default function Blogs({ page }) {
                             </div>
                             <div className="bg-white p-8 w-full">
                                 <div className="flex flex-col gap-4">
-                                    <div className="flex gap-4">
+                                    <div className="flex flex-wrap gap-x-4 gap-y-2">
                                         <div className="flex items-center gap-2 text-muted-foreground"><User size={16} fill="var(--primary)" stroke="var(--primary)" />{blog.by}</div>
                                         <div className="flex items-center gap-2 text-muted-foreground"><Tag size={16} fill="var(--primary)" stroke="var(--primary)" />{blog.tag}</div>
                                     </div>

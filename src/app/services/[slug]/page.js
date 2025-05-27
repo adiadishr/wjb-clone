@@ -26,27 +26,20 @@ export default async function Page({ params }) {
                         <div className="text-2xl font-semibold tracking-tight">What are the benefits?</div>
                         <div className="text-base/7 text-paragraph mb-6">{service.description}</div>
                         <div className="grid grid-cols-1 sm:grid-cols-3 w-full gap-6">
-                            <div className="leading-7 flex flex-col gap-6 sm:col-span-1 border-l border-primary pl-6">
+                            <div className="leading-7 flex flex-col gap-6 sm:col-span-1 border-l h-max border-primary pl-6">
                                 <div data-aos="fade-up">
-                                    <BadgeCheck className="inline-block mr-2" stroke="white" fill="oklch(0.705 0.213 47.604)" size={24} /> 260+ Projects Completed
+                                    <BadgeCheck className="inline-block mr-2" stroke="white" fill="var(--primary)" size={24} /> 260+ Projects Completed
                                 </div>
                                 <div data-aos="fade-up" data-aos-delay='50'>
-                                    <BadgeCheck className="inline-block mr-2" stroke="white" fill="oklch(0.705 0.213 47.604)" size={24} /> 260+ Projects Completed
+                                    <BadgeCheck className="inline-block mr-2" stroke="white" fill="var(--primary)" size={24} /> 260+ Projects Completed
                                 </div>
                                 <div data-aos="fade-up" data-aos-delay='100'>
-                                    <BadgeCheck className="inline-block mr-2" stroke="white" fill="oklch(0.705 0.213 47.604)" size={24} /> 260+ Projects Completed
-                                </div>
-                                <div data-aos="fade-up" data-aos-delay='150'>
-                                    <BadgeCheck className="inline-block mr-2" stroke="white" fill="oklch(0.705 0.213 47.604)" size={24} /> 260+ Projects Completed
-                                </div>
-                                <div data-aos="fade-up" data-aos-delay='200'>
-                                    <BadgeCheck className="inline-block mr-2" stroke="white" fill="oklch(0.705 0.213 47.604)" size={24} /> 260+ Projects Completed
+                                    <BadgeCheck className="inline-block mr-2" stroke="white" fill="var(--primary)" size={24} /> 260+ Projects Completed
                                 </div>
                             </div>
                             <div className="relative h-72 sm:col-span-2">
                                 <Image src={service.src} fill alt={service.slug} className="object-cover" />
                             </div>
-
                         </div>
                     </div>
                     <div className="md:w-1/3 md:sticky md:top-[calc(100px)] h-full">

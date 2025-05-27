@@ -23,7 +23,13 @@ const Card = React.memo(({
         "absolute inset-0 bg-black/50 flex items-end py-8 px-4 duration-300 group overflow-hidden",
         hovered === index ? "opacity-100" : "opacity-0"
       )}>
-      <Link href={`/projects/`} className="bg-white py-2 px-4 rounded-t-2xl duration-500 absolute bottom-0 md:-bottom-20 md:group-hover:bottom-0 left-1/2 -translate-x-1/2">
+      <div className="text-white duration-500 absolute bottom-0 md:-bottom-20 md:group-hover:bottom-1/2 left-1/2 -translate-x-1/2 translate-y-1/2">
+        <div
+          className={cn("text-xl md:text-2x text-center")}>
+          {card.title}
+        </div>
+      </div>
+      <Link href={`/projects/${card.slug}`} className="bg-white py-2 px-4 rounded-t-2xl duration-500 absolute bottom-0 md:-bottom-20 md:group-hover:bottom-0 left-1/2 -translate-x-1/2">
         <div
           className={cn("text-xl md:text-2xl bg-clip-text text-transparent bg-gradient-to-b from-primary to-yellow-400")}>
           Learn more
