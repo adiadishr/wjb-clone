@@ -31,7 +31,7 @@ export default function Nav() {
               <Link href="/" className={cn('duration-300', pathname === '/' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>Home</Link>
               <Link href="/about" className={cn('duration-300', pathname === '/about' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>About Us</Link>
               <FlyoutLink pathname={pathname} href="/services" />
-              <Link href="/projects" className={cn('duration-300', pathname === '/projects' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>projects</Link>
+              <Link href="/projects" className={cn('duration-300', pathname.includes('/projects') && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>projects</Link>
               <Link href="/blogs" className={cn('duration-300', pathname.includes('/blogs') && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>Blogs</Link>
               <Link href="/privacy-policy" className={cn('duration-300', pathname === '/privacy-policy' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>Privacy Policy</Link>
             </div>
