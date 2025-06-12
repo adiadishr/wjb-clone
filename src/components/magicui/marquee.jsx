@@ -76,8 +76,8 @@ export function Testimonials() {
   return (
     <div className="bg-white py-20">
       <div className="container mx-auto w-[90%]">
-        <div data-aos='fade-up' className="text-sm font-medium leading-none mb-4 text-primary text-center">Testimonials</div>
-        <div data-aos='fade-up' data-aos-delay='150' className="leading-tight text-4xl md:text-5xl tracking-tight mb-24 font-semibold text-center">
+        <h5 data-aos='fade-up' className="relative mb-2.5 md:text-xl text-center uppercase text-primary">Our Culture</h5>
+        <div data-aos='fade-up' data-aos-delay='150' className="leading-tight text-4xl md:text-5xl tracking-tight mb-15 font-semibold text-center">
           What do our <span className="italic">clients</span> say?
         </div>
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">

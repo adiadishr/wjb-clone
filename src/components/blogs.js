@@ -15,12 +15,12 @@ import Link from "next/link";
 export default function Blogs({ page }) {
     return (
         <div className="w-[90%] md:w-[85%] mx-auto py-20">
-            <div data-aos='fade-up' className="text-sm font-medium leading-none mb-4 text-primary text-center">Latest Blogs</div>
-            <div data-aos='fade-up' className={cn("leading-tight text-4xl md:text-5xl font-semibold tracking-tight text-center", page ? "mb-24" : "mb-8")}>
+            <h5 data-aos='fade-up' className="relative mb-2.5 md:text-xl text-center uppercase text-primary">Latest Blogs</h5>
+            <div data-aos='fade-up' className={cn("leading-tight text-4xl md:text-5xl font-semibold tracking-tight text-center mb-15")}>
                 Our latest <br /><span className="italic mr-2">blogs </span> and<span className="italic"> articles</span>
             </div>
             {!page &&
-                <div data-aos='fade-up' className="w-full flex justify-center mb-24"><Button size={'lg'} className='w-max py-6'>View More<ChevronRight size={16} /></Button></div>
+                <div data-aos='fade-up' className="w-full flex justify-center mb-15"><Button size={'lg'} className='w-max py-6'>View More<ChevronRight size={16} /></Button></div>
             }
             {!page ?
                 <div className="w-full flex justify-center">

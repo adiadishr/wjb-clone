@@ -14,7 +14,7 @@ import { VelocityScroll } from "@/components/magicui/velocity-based-scroll";
 export default function Page() {
   return (<>
     {/* Hero */}
-    <div className="relative overflow-hidden">
+    {/* <div className="relative overflow-hidden">
       <div className="container mx-auto w-[90%] md:w-[85%] px-4 mt-[60px] md:mt-[100px] min-h-[calc(100dvh-60px)] md:min-h-[calc(100dvh-100px)] flex flex-col justify-center relative">
         <Image data-aos="fade-right" fill className="-translate-x-[20%] -z-10 object-cover object-[0%_0%]" src="/hero-shape.webp" alt="Construction Company" />
         <div data-aos="fade-up" className="md:text-left leading-tight text-center font-semibold text-4xl md:text-5xl tracking-tight mb-4">
@@ -32,6 +32,26 @@ export default function Page() {
       </div>
       <div data-aos='fade-left' data-aos-duration='2000' className="absolute right-0 top-0 h-full w-1/2 md:block hidden">
         <Image fill className="object-cover object-[50%_50%] absolute right-0 top-0" src="/hero.jpeg" alt="Construction Company" />
+      </div>
+    </div> */}
+    <div className="text-foreground bg-white">
+      <div className="w-[90%] container md:w-[85%] mx-auto pt-40 pb-20">
+        <div className="grid grid-cols-1 pb-20 md:grid-cols-2">
+          <h1 className="md:ml-10 mb-10 font-semibold text-5xl/16 md:text-7xl/21 capitalize text-center md:mb-0 md:text-start">
+            From  <span className="font-bold">blueprint </span>
+            <br />
+            <span className="md:ml-10">to Brilliance</span>
+          </h1>
+          <h5 className="self-end text-xl text-center md:text-start md:pl-20">We help deliver solutions in site preparation, excavation, foundations, drainage and civil engineering.</h5>
+        </div>
+        <div className="h-125 w-full relative">
+          <Image
+            className="object-cover"
+            fill
+            src="/hero.jpeg"
+            alt="Hero"
+          />
+        </div>
       </div>
     </div>
     <Services />
