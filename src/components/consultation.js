@@ -7,11 +7,12 @@ export default function Consultation() {
   return (<>
     <div data-aos='fade-up' className="bg-neutral text-neutral-foreground">
       <div className="container w-[90%] mx-auto py-20 md:pt-36 md:pb-48 flex md:flex-row flex-col relative">
-        <Image className="z-10 translate-x-[-1rem]" src="/shape.webp" alt="Man" fill />
-        <div data-aos='flip-right' className="w-1/3 hidden md:block relative">
-          <Image className="absolute -bottom-32 right-1/2 translate-x-1/2" src="/woman.webp" alt="Construction Worker Smiling" height={0} width={280} />
+        <div className="relative">
+          <div data-aos='flip-right' className="hidden md:block absolute w-150 h-100">
+            <Image className="absolute -translate-x-15 -translate-y-25" src="/engineer.png" alt="Construction Worker Smiling" fill />
+          </div>
         </div>
-        <div className="md:w-2/3 z-20 w-full">
+        <div className="md:w-2/3 ml-auto z-20 w-full">
           <div data-aos='fade-up' className="text-sm font-medium leading-none mb-4">Get Consultation</div>
           <div data-aos='fade-up' className="leading-tight text-3xl sm:text-4xl font-semibold md:text-5xl tracking-tight max-w-max mb-8 w-max">
             Schedule a free Consultation!

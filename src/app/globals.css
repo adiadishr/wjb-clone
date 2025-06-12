@@ -124,4 +124,16 @@
     -webkit-clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
     clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
   }
+
+  .headline {
+    @apply text-5xl font-light md:text-7xl
+  }
+
+  .heading {
+    @apply text-3xl md:text-5xl/16 font-light
+  }
+
+  .subheading {
+    @apply text-xl md:text-3xl font-light
+  }
 }

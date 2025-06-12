@@ -5,18 +5,20 @@ export default function ContactForm() {
   return (
     <div className="bg-white overflow-hidden">
       <div
-        className="container mx-auto w-[80%] py-24 md:py-36 flex md:flex-row flex-col gap-8"
+        className="container mx-auto w-[80%] py-20 flex md:flex-row flex-col gap-8"
       >
         {/* Text & Form */}
         <div
           className="w-full order-2 md:order-1"
           data-aos="fade-down"
           data-aos-delay="100"
+          data-aos-offset="-200"
         >
           <div
             className="text-sm font-medium leading-none mb-4 text-primary"
             data-aos="fade-down"
             data-aos-delay="200"
+            data-aos-offset="-200"
           >
             Get in touch!
           </div>
@@ -24,6 +26,7 @@ export default function ContactForm() {
             className="leading-tight text-4xl md:text-5xl font-semibold tracking-tight mb-8"
             data-aos="fade-down"
             data-aos-delay="300"
+            data-aos-offset="-200"
           >
             Have upcoming <span className="italic">Projects?</span>
             <br /> Let&apos;s Talk!
@@ -34,6 +37,7 @@ export default function ContactForm() {
             className="max-w-xl w-full"
             data-aos="fade-up"
             data-aos-delay="400"
+            data-aos-offset="-200"
           >
             <div className="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2">
               <div>
@@ -102,6 +106,7 @@ export default function ContactForm() {
           className="relative md:h-auto h-[32rem] md:order-2 order-1 md:w-[80%] justify-end"
           data-aos="fade-left"
           data-aos-delay="200"
+          data-aos-offset="-200"
         >
           <Image
             fill

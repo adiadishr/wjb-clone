@@ -20,7 +20,7 @@ export default function Page() {
         <div className="flex flex-col flex-grow flex-1 md:mt-0 mt-24">
           <div data-aos="fade-up">
             <div className="text-sm font-medium text-primary leading-none mb-4">About our company</div>
-            <div className="leading-tight text-4xl md:text-5xl font-pt-serif tracking-tight mb-8">
+            <div className="leading-tight text-4xl md:text-5xl font-medium tracking-tight mb-8">
               Trusted Groundwork Solutions for <span className="italic mr-2">any</span> Project
             </div>
           </div>
@@ -57,7 +57,7 @@ export default function Page() {
         </div>
       </div>
     </div>
-    <div className="bg-white">
+    <div className="bg-white pb-20 md:pb-40">
       <div className="container mx-auto w-[90%] flex">
         <div data-aos='flip-up' className="md:p-12 p-8 w-full bg-primary text-primary-foreground flex-wrap flex items-center rounded-sm justify-between gap-y-4 md:gap-y-16">
           <div data-aos='fade-up' data-aos-delay='150'>
@@ -79,20 +79,23 @@ export default function Page() {
         </div>
       </div>
     </div>
-    <div className="bg-white">
-      <div className="container mx-auto w-[90%] md:w-[85%] py-24 md:py-36">
-        <div data-aos='fade-up' className="text-sm text-center font-medium leading-none mb-4 text-primary mx-auto max-w-xl">Who are we?</div>
-        <div data-aos='fade-up' className="leading-tight text-center text-3xl sm:text-4xl md:text-5xl font-pt-serif tracking-tight mb-8 mx-auto max-w-xl">
-          A message from <span className="italic mr-1">the CEO</span>
+    <div className="py-20 text-white bg-neutral">
+      <div className="w-[90%] md:w-[85%] mx-auto grid md:grid-cols-4">
+        <div className="relative col-span-1 h-100">
+          <Image
+            fill
+            alt="Person"
+            className="object-cover object-[25%_0%]"
+            src="/engineer.jpg"
+          />
         </div>
-        <p data-aos='fade-up' data-aos-delay='150' className="leading-7 max-w-xl mx-auto mb-6"> The king, seeing how much happier his subjects were, realized the error of his ways and repealed the joke tax. The king, seeing how much happier his subjects were, realized the error of his ways and repealed the joke tax. The king, seeing how much happier his subjects were, realized the error of his ways and repealed the joke tax. The king, seeing how much happier his subjects were, realized the error of his ways and repealed the joke tax.
-        </p>
-        <p data-aos='fade-up' data-aos-delay='150' className="leading-7 max-w-xl mx-auto mb-8"> The king, seeing how much happier his subjects were, realized the error of his ways and repealed the joke tax. The king, seeing how much happier his subjects were, realized the error of his ways and repealed the joke tax. The king, seeing how much happier his subjects were, realized the error of his ways and repealed the joke tax. The king, seeing how much happier his subjects were, realized the error of his ways and repealed the joke tax.
-        </p>
-        <p data-aos='fade-up' data-aos-delay='300' className="leading-7 max-w-xl mx-auto">
-          Signed, <br />
-          <span className="font-semibold">John Doe</span><br />
-        </p>
+        <div className="col-span-1 md:col-span-3 mt-10 md:mt-0 md:pl-40 grow">
+          <div className="mb-20 text-3xl font-light">“We are constantly looking for situations where we are able to add value in a way that our competitors don&apos;t.”</div>
+          <div className="flex flex-col justify-self-end w-max">
+            <div className="mb-2.5 text-xl font-medium">Joseph Baratta</div>
+            <div className="font-light">Global Head of Private Equity Strategies</div>
+          </div>
+        </div>
       </div>
     </div>
     <div className="container mx-auto w-[90%] md:w-[85%] py-24 md:py-36 flex relative">

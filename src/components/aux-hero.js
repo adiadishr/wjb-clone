@@ -1,17 +1,27 @@
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
-export default function AuxHero({ title, breadcrumbs }) {
-  return (
-    <div className="relative">
-      <Image data-aos='fade-left' fill className="object-cover scale-x-[-1] object-[0%_50%] brightness-50 -z-10" src="/silhouette.jpeg" alt="Construction Company" />
-      <div className="container mx-auto w-[90%] md:w-[85%] mt-[60px] md:mt-[100px] min-h-[calc(100dvh-150px)] md:min-h-[calc(100dvh-200px)] flex flex-col justify-center">
-        <div data-aos='fade-up' data-aos-delay='150' className="md:text-left text-background leading-tight text-center text-4xl md:text-5xl tracking-tight font-semibold mb-4">
-          {title}
+export default function AuxHero({ title, src }) {
+  return (<>
+    <div className="bg-white text-black">
+      <div className="w-[90%] container md:w-[85%] mx-auto pt-35 pb-20">
+        <div className="grid grid-cols-1 pb-20 md:grid-cols-2">
+          <h1 className="mt-10 mb-10 text-5xl text-center md:mb-0 md:text-start">
+            {title}
+          </h1>
+          <h5 className="self-end text-xl text-center md:text-start md:pl-20">
+            We extend our heartfelt thanks to our associates, partners, clients, and customers, whose support has been instrumental in our success.
+          </h5>
         </div>
-        <div data-aos='fade-up' data-aos-delay='200' className="text-neutral-foreground md:text-left text-center w-full mb-8">
-          Home / About Us
+        <div className="relative w-full h-125">
+          <Image
+            className="object-cover"
+            fill
+            src={src ? src : "/silhouette.jpeg"}
+            alt="Image"
+          />
         </div>
       </div>
     </div>
-  )
+  </>)
 }

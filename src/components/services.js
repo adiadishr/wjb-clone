@@ -6,8 +6,9 @@ import Link from "next/link";
 
 export default function Services({ page }) {
   return (<>
-    <div className="relative bg-white">
-      <div className="container w-[90%] md:w-[85%] mx-auto py-24 md:py-36">
+    <div className="relative bg-neutral-100">
+      <Image fill className="object-cover opacity-5" src="/bg.png" alt="Background" />
+      <div className="container w-[90%] md:w-[85%] mx-auto py-20 md:py-40">
         <div data-aos='fade-up' className="text-sm font-medium leading-none mb-4 text-primary text-center">Our Services</div>
         <div data-aos='fade-up' data-aos-delay='100' className={`leading-tight text-4xl md:text-5xl font-semibold tracking-tight text-center ${page ? 'mb-24' : 'mb-8'}`}>
           Discover Our <span className="italic">Exceptional</span><br /> Engineering Solutions

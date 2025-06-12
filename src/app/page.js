@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Binoculars, PhoneCall } from "lucide-react";
+import { ArrowRight, Binoculars, PhoneCall } from "lucide-react";
 import { Testimonials } from "@/components/magicui/marquee";
 import Image from "next/image";
 import ContactForm from "@/components/contact-form";
@@ -9,12 +9,13 @@ import { TimelineDemo } from "@/components/timeline";
 import Blogs from "@/components/blogs";
 import Projects from "@/components/projects";
 import Link from "next/link";
+import { VelocityScroll } from "@/components/magicui/velocity-based-scroll";
 
 export default function Page() {
   return (<>
     {/* Hero */}
     <div className="relative overflow-hidden">
-      <div className="container mx-auto w-[80%] px-4 mt-[60px] md:mt-[100px] min-h-[calc(100dvh-60px)] md:min-h-[calc(100dvh-100px)] flex flex-col justify-center relative">
+      <div className="container mx-auto w-[90%] md:w-[85%] px-4 mt-[60px] md:mt-[100px] min-h-[calc(100dvh-60px)] md:min-h-[calc(100dvh-100px)] flex flex-col justify-center relative">
         <Image data-aos="fade-right" fill className="-translate-x-[20%] -z-10 object-cover object-[0%_0%]" src="/hero-shape.webp" alt="Construction Company" />
         <div data-aos="fade-up" className="md:text-left leading-tight text-center font-semibold text-4xl md:text-5xl tracking-tight mb-4">
           From blueprint, <br />to Brilliance.
@@ -36,7 +37,57 @@ export default function Page() {
     <Services />
     <Consultation />
     <Projects />
+    <div className="text-white bg-neutral py-20">
+      <section className="w-[90%] container md:w-[85%] gap-y-10 mx-auto items-center justify-between grid md:grid-cols-16">
+        <div className="col-span-1 md:col-span-7">
+          <h5 className="relative mb-10 md:text-xl font-light uppercase w-max">Our Culture</h5>
+          <div className="mb-10 heading">Excellence, Integrity, Innovation and Humility</div>
+          <div className="pr-10 mb-10 md:text-lg font-light">The firm&apos;s achievements are only possible because of our most valuable asset: our people, knit together by a shared mission to be the best at what we do.</div>
+        </div>
+        <div className="col-span-1 md:col-span-9 md:pl-20">
+          <div className="w-full divide-y p-10 md:p-15 h-max bg-gray-950">
+            <div className="flex items-center justify-between pb-5 md:pb-10 cursor-pointer group">
+              <div className="text-lg md:text-2xl font-extralight group">
+                <div className="relative capitalize inline-block">
+                  Have a proposition?
+                  <span className="absolute bottom-0 left-0 w-0 h-px duration-300 bg-white group-hover:w-full"></span>
+                </div>
+                <br />
+                <div className="relative  capitalize inline-block">
+                  Contact Us
+                  <span className="absolute bottom-0 left-0 w-0 h-px duration-300 delay-150 bg-white group-hover:w-full"></span>
+                </div>
+              </div>
+              <div className="p-2.5 border border-white rounded-full group-hover:text-black group-hover:bg-white duration-300 group-hover:scale-125">
+                <ArrowRight className="transition-transform duration-300 delay-100 group-hover:-rotate-45" size={20} />
+              </div>
+            </div>
+            <div className="flex items-center justify-between pt-5 md:pt-10 cursor-pointer group">
+              <div className="text-lg md:text-2xl font-extralight group">
+                <div className="relative capitalize inline-block">
+                  Want to join us?
+                  <span className="absolute bottom-0 left-0 w-0 h-px duration-300 bg-white group-hover:w-full"></span>
+                </div>
+                <br />
+                <div className="relative capitalize inline-block">
+                  View open positions
+                  <span className="absolute bottom-0 left-0 w-0 h-px duration-300 delay-150 bg-white group-hover:w-full"></span>
+                </div>
+              </div>
+              <div className="p-2.5 border border-white rounded-full group-hover:text-black group-hover:bg-white duration-300 group-hover:scale-125">
+                <ArrowRight className="transition-transform duration-300 delay-100 group-hover:-rotate-45" size={20} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
     <Testimonials />
+    <div className="bg-primary text-white py-20">
+      <VelocityScroll numRows={1} defaultVelocity={2.5} className="text-5xl font-normal">
+        Build with Hayes
+      </VelocityScroll>
+    </div>
     <TimelineDemo />
     <Blogs />
     <ContactForm />

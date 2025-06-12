@@ -14,7 +14,7 @@ import Link from "next/link";
 
 export default function Blogs({ page }) {
     return (
-        <div className="container mx-auto w-[90%] py-24 md:py-36">
+        <div className="w-[90%] md:w-[85%] mx-auto py-20">
             <div data-aos='fade-up' className="text-sm font-medium leading-none mb-4 text-primary text-center">Latest Blogs</div>
             <div data-aos='fade-up' className={cn("leading-tight text-4xl md:text-5xl font-semibold tracking-tight text-center", page ? "mb-24" : "mb-8")}>
                 Our latest <br /><span className="italic mr-2">blogs </span> and<span className="italic"> articles</span>
