@@ -2,6 +2,7 @@ import { PhoneCall } from "lucide-react";
 import { Button } from "./ui/button";
 import Image from "next/image";
 import { NumberTicker } from "./magicui/number-ticker";
+import Link from "next/link";
 
 export default function Consultation() {
   return (<>
@@ -17,7 +18,7 @@ export default function Consultation() {
           <div data-aos='fade-up' className="leading-tight text-3xl sm:text-4xl font-semibold md:text-5xl tracking-tight max-w-max mb-8 w-max">
             Schedule a free Consultation!
           </div>
-          <Button data-aos='fade-up' className={'flex items-center'} size={'lg'}><PhoneCall size={16} />Contact Us</Button>
+          <Link href="/contact" className="btn w-max gap-2" size={'lg'}><PhoneCall fill="white" size={16} />Contact Us</Link>
         </div>
       </div>
     </div>

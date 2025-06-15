@@ -37,37 +37,39 @@ export default function Nav() {
       <nav
         className={cn(
           "max-h-[100px] h-[100px] duration-300",
-          scrolled
-            ? "bg-white text-black"
-            : "bg-transparent text-white backdrop-blur"
+          pathname !== "/" ?
+            scrolled
+              ? "bg-white text-black"
+              : "bg-transparent  text-white"
+            : "bg-white text-black"
         )}
       >
         <div className="container mx-auto flex items-center h-full justify-between w-[90%] md:w-[85%]">
           <div className="flex h-full gap-20 relative">
-            <div className="absolute left-0 -top-2.5">
-              <Link href="/" className="relative">
-                <Image className="object-cover" src="/logo.png" height={0} width={120} alt="Logo" />
-              </Link>
+            <div className="absolute left-0 md:-left-4 -top-2.5">
+              <div className="relative size-28">
+                <Image className={cn("object-cover", pathname !== "/" && !scrolled && "brightness-1000 saturate-0")} src="/logo.png" fill alt="Logo" />
+              </div>
             </div>
-            <div className="lg:flex items-center gap-5 text-gray-900 uppercase hidden md:ml-40">
-              <Link href="/" className={cn('duration-300 flex items-center gap-2.5', pathname === '/' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>
+            <div className="lg:flex items-center gap-5 text-sm font-medium uppercase hidden md:ml-40">
+              <Link href="/" className={cn('duration-150 flex items-center gap-2.5', pathname === '/' && 'text-primary hover:!text-primary/80 brightness-125', 'hover:text-primary')}>
                 <Home size={18} strokeWidth={1.25} />
                 Home
               </Link>
-              <Link href="/about" className={cn('duration-300 flex items-center gap-2', pathname === '/about' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>
+              <Link href="/about" className={cn('duration-150 flex items-center gap-2', pathname === '/about' && 'text-primary hover:!text-primary/80 brightness-125', 'hover:text-primary')}>
                 <Info size={18} strokeWidth={1.25} />
                 About Us
               </Link>
               <FlyoutLink pathname={pathname} href="/services" />
-              <Link href="/projects" className={cn('duration-300 flex items-center gap-2', pathname.includes('/projects') && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>
+              <Link href="/projects" className={cn('duration-150 flex items-center gap-2', pathname.includes('/projects') && 'text-primary hover:!text-primary/80 brightness-125', 'hover:text-primary')}>
                 <Box size={18} strokeWidth={1.25} />
-                projects
+                Projects
               </Link>
-              <Link href="/blogs" className={cn('duration-300 flex items-center gap-2', pathname.includes('/blogs') && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>
+              <Link href="/blogs" className={cn('duration-150 flex items-center gap-2', pathname.includes('/blogs') && 'text-primary hover:!text-primary/80 brightness-125', 'hover:text-primary')}>
                 <Book size={18} strokeWidth={1.25} />
                 Blogs
               </Link>
-              <Link href="/privacy-policy" className={cn('duration-300 flex items-center gap-2', pathname === '/privacy-policy' && 'text-primary hover:!text-primary/80', 'hover:text-primary')}>
+              <Link href="/privacy-policy" className={cn('duration-150 flex items-center gap-2', pathname === '/privacy-policy' && 'text-primary hover:!text-primary/80 brightness-125', 'hover:text-primary')}>
                 <Lock size={18} strokeWidth={1.25} />
                 Privacy Policy
               </Link>

@@ -12,15 +12,18 @@ import { cn } from "@/lib/utils";
 import { blogs } from "@/constants/blogs";
 import Link from "next/link";
 
+
 export default function Blogs({ page }) {
     return (
         <div className="w-[90%] md:w-[85%] mx-auto py-20">
             <h5 data-aos='fade-up' className="relative mb-2.5 md:text-xl text-center uppercase text-primary">Latest Blogs</h5>
-            <div data-aos='fade-up' className={cn("leading-tight text-4xl md:text-5xl font-semibold tracking-tight text-center mb-15")}>
+            <div data-aos='fade-up' className={cn("leading-tight text-4xl md:text-5xl font-medium tracking-tight text-center mb-10")}>
                 Our latest <br /><span className="italic mr-2">blogs </span> and<span className="italic"> articles</span>
             </div>
             {!page &&
-                <div data-aos='fade-up' className="w-full flex justify-center mb-15"><Button size={'lg'} className='w-max py-6'>View More<ChevronRight size={16} /></Button></div>
+                <div data-aos='fade-up' data-aos-delay='150' className="w-full flex justify-center mb-15">
+                    <Link href="/blogs" className='btn'>Learn More<ChevronRight size={16} /></Link>
+                </div>
             }
             {!page ?
                 <div className="w-full flex justify-center">

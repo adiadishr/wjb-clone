@@ -56,7 +56,7 @@ export default function Page() {
     </div>
     <Services />
     <Consultation />
-    <Projects />
+    <Testimonials />
     <div className="text-white bg-neutral py-20">
       <section className="w-[90%] container md:w-[85%] gap-y-10 mx-auto items-center justify-between grid md:grid-cols-16">
         <div className="col-span-1 md:col-span-7">
@@ -102,10 +102,10 @@ export default function Page() {
         </div>
       </section>
     </div>
-    <Testimonials />
+    <Projects />
     <div className="bg-primary text-white py-20">
       <VelocityScroll numRows={1} defaultVelocity={2.5} className="text-5xl font-normal">
-        Build with Hayes
+        Hayes Plant Hire
       </VelocityScroll>
     </div>
     <TimelineDemo />

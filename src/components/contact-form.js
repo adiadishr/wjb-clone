@@ -5,7 +5,7 @@ export default function ContactForm() {
   return (
     <div className="bg-white overflow-hidden">
       <div
-        className="container mx-auto w-[80%] py-20 flex md:flex-row flex-col gap-8"
+        className="container mx-auto w-[80%] py-20 flex md:flex-row flex-col gap-20"
       >
         {/* Text & Form */}
         <div
@@ -15,7 +15,7 @@ export default function ContactForm() {
           data-aos-offset="-200"
         >
           <div
-            className="text-sm font-medium leading-none mb-4 text-primary"
+            className="subheading mb-5"
             data-aos="fade-down"
             data-aos-delay="200"
             data-aos-offset="-200"
@@ -28,8 +28,7 @@ export default function ContactForm() {
             data-aos-delay="300"
             data-aos-offset="-200"
           >
-            Have upcoming <span className="italic">Projects?</span>
-            <br /> Let&apos;s Talk!
+            Have upcoming Projects? Let&apos;s Talk!
           </div>
           <form
             action="#"
@@ -108,12 +107,13 @@ export default function ContactForm() {
           data-aos-delay="200"
           data-aos-offset="-200"
         >
-          <Image
-            fill
-            className="object-cover"
-            src="/form.jpeg"
-            alt="Construction Company"
-          />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d49.01487505325154!2d-0.3386760299544168!3d51.500506931420475!2m2!1f187.28096838078844!2f6.13469231285037!3m2!1i1024!2i768!4f59.99659545210261!3m3!1m2!1s0x48760d71a43f4b1b%3A0x36dc15523bd3e854!2sHayes%20Gate%20Plant%20Hire%20Ltd!5e1!3m2!1sen!2snp!4v1749987088607!5m2!1sen!"
+            className="w-full h-full border-0"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
     </div>

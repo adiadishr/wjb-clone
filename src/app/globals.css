@@ -10,9 +10,7 @@
   --color-neutral: var(--neutral);
   --color-neutral-foreground: var(--neutral-foreground);
   --color-paragraph: var(--paragraph);
-  --font-sans: var(--font-titilium-web);
-  --font-mono: var(--font-geist-mono);
-  --font-pt-serif: var(--font-pt-serif);
+  --font-sans: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -113,11 +111,11 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/50 !tracking-tight;
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans !tracking-tight;
   }
 
   .cta {
@@ -126,14 +124,26 @@
   }
 
   .headline {
-    @apply text-5xl font-light md:text-7xl
+    @apply text-5xl font-semibold md:text-7xl
   }
 
   .heading {
-    @apply text-3xl md:text-5xl/16 font-light
+    @apply text-3xl md:text-5xl/16 font-medium
   }
 
   .subheading {
-    @apply text-xl md:text-3xl font-light
+    @apply text-primary text-2xl
+  }
+
+  .subheading-gradient {
+    @apply md:text-lg uppercase text-transparent bg-clip-text bg-gradient-to-b from-orange-400 to-yellow-400
+  }
+
+  .gradient-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-b from-orange-400 to-yellow-400
+  }
+
+  .btn {
+    @apply bg-primary text-white hover:bg-primary/80 duration-300 px-4 py-2 flex items-center
   }
 }
