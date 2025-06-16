@@ -16,7 +16,7 @@ export default async function Page({ params }) {
     return (<>
         <AuxHero title={blog.title} />
         <div className="bg-white">
-            <div className="container mx-auto md:w-[85%] w-[90%] py-24 md:py-36">
+            <div className="container mx-auto md:w-[85%] w-[90%] pt-0 pb-20">
                 <div className="flex w-full md:flex-row flex-col gap-12 lg:gap-24 relative">
                     <div className="md:w-2/3">
                         <div className="relative w-full h-[36rem]">
