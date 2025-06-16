@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 import { services } from "@/constants/services";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 export default function Services({ page }) {
   return (<>
@@ -10,7 +11,7 @@ export default function Services({ page }) {
       {!page &&
         <Image fill className="object-cover opacity-5" src="/bg.png" alt="Background" />
       }
-      <div className="container w-[90%] md:w-[85%] mx-auto pt-10 pb-30">
+      <div className={cn("container w-[90%] md:w-[85%] mx-auto pb-30", page ? "pt-10" : "pt-20")}>
         <div data-aos='fade-up' className="text-sm font-medium leading-none mb-4 text-primary text-center">Our Services</div>
         <div data-aos='fade-up' data-aos-delay='100' className={`leading-tight text-4xl md:text-5xl font-semibold tracking-tight text-center ${page ? 'mb-24' : 'mb-8'}`}>
           Discover Our <span className="italic">Exceptional</span><br /> Engineering Solutions

@@ -70,7 +70,7 @@ export default function FlyoutLink({ href, pathname }) {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </div >
+        </div>
     );
 };
 
@@ -80,7 +80,7 @@ const Content = () => {
             <div className="mb-3 space-y-3">
                 <h3 className="font-semibold">Services at Hayes</h3>
                 {services.map((service, idx) => (
-                    <Link key={idx} href={`/services/${service.slug}`} className="block text-sm hover:underline">
+                    <Link key={idx} href={`/services/${service.slug}`} className="block font-light text-sm hover:underline">
                         {service.title}
                     </Link>
                 ))}

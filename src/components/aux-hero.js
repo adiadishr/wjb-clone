@@ -2,17 +2,19 @@ import { cn } from "@/lib/utils";
 import { House } from "lucide-react";
 import Image from "next/image";
 
-export default function AuxHero({ title, src }) {
+export default function AuxHero({ title, src, shape, shapeColor, objPosition }) {
+  const Icon = shape || House;
+  const img = src || "/silhouette.jpeg";
   return (<>
     <div className="bg-white text-black">
       <div className="relative w-full h-80">
-        <div className="bg-red-500 p-7.5 rounded-full absolute translate-x-1/2 right-1/2 -bottom-1/2 -translate-y-[85%] z-10 flex items-center justify-center text-white">
-          <House size={60} />
+        <div className={cn("bg-gradient-to-br from-primary to-yellow-300 p-5 rounded-full absolute translate-x-1/2 right-1/2 -bottom-1/2 -translate-y-[115%] z-10 flex items-center justify-center text-white", shapeColor)}>
+          <Icon size={60} />
         </div>
         <Image
-          className="object-cover absolute inset-0 brightness-50"
+          className={cn("object-cover absolute inset-0 brightness-60", objPosition)}
           fill
-          src={src ? src : "/silhouette.jpeg"}
+          src={img}
           alt="Image"
         />
       </div>

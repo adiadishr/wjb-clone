@@ -3,12 +3,12 @@
 import AuxHero from "@/components/aux-hero";
 import HistoryCard from "@/components/history-card";
 import { NumberTicker } from "@/components/magicui/number-ticker";
-import { BadgeCheck, ChevronRight } from "lucide-react";
+import { BadgeCheck, ChevronRight, Info } from "lucide-react";
 import Image from "next/image";
 
 export default function Page() {
   return (<>
-    <AuxHero title={'About Us'} />
+    <AuxHero title={'About Us'} objPosition="object-[0%_0%]" shape={Info} src="/engineer.jpg" />
     <div className="bg-white pb-20">
       <div className="container mx-auto w-[90%] md:w-[85%] flex">
         <div data-aos='flip-up' className="md:p-12 p-8 w-full bg-primary text-primary-foreground flex-wrap flex items-center justify-between gap-y-4 md:gap-y-16">

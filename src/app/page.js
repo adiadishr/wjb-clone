@@ -13,46 +13,26 @@ import { VelocityScroll } from "@/components/magicui/velocity-based-scroll";
 
 export default function Page() {
   return (<>
-    {/* Hero */}
-    {/* <div className="relative overflow-hidden">
-      <div className="container mx-auto w-[90%] md:w-[85%] px-4 mt-[60px] md:mt-[100px] min-h-[calc(100dvh-60px)] md:min-h-[calc(100dvh-100px)] flex flex-col justify-center relative">
-        <Image data-aos="fade-right" fill className="-translate-x-[20%] -z-10 object-cover object-[0%_0%]" src="/hero-shape.webp" alt="Construction Company" />
-        <div data-aos="fade-up" className="md:text-left leading-tight text-center font-semibold text-4xl md:text-5xl tracking-tight mb-4">
-          From blueprint, <br />to Brilliance.
+    {/* Hero Video */}
+    <div className="relative flex items-center justify-center h-[calc(100dvh)]">
+      <video
+        className="absolute inset-0 w-full h-full object-cover object-[0%_100%] brightness-90 -z-10"
+        src="/hero.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+      />
+      <div className="absolute inset-0 z-0 w-full h-full bg-black opacity-35" />
+      <div className="z-10 flex flex-col items-center justify-center text-white translate-y-[65%] md:translate-y-[75%]">
+        <div className="absolute -translate-y-[90%]">
+          <div className="relative size-48">
+            <Image src="/logo.png" fill className="object-cover brightness-2000 saturate-0" alt="Construction Company" />
+          </div>
         </div>
-        <div data-aos="fade-up" data-aos-delay="150" className="text-muted-foreground md:text-left text-center max-w-lg text-lg/7 mb-8">
-          We help deliver solutions in site preparation, excavation, foundations, drainage and civil engineering.
-        </div>
-        <div data-aos="fade-up" data-aos-delay="300" className="flex gap-4 md:justify-start justify-center">
-          <Link href="/about"><Button size={'lg'}><Binoculars size={16} />Discover More</Button></Link>
-          <Link href="/contact"><Button size={'lg'} variant={'outline'}><PhoneCall size={16} />Book a Call</Button></Link>
-        </div>
-        <div data-aos="fade-left" className="w-0 hidden h-[calc(100dvh-100px)] md:block absolute right-0 grow md:w-5/12">
-        </div>
+        <div className="mb-8 headline text-center">Build, <br /> with <span className="gradient-text">Brilliance</span></div>
       </div>
-      <div data-aos='fade-left' data-aos-duration='2000' className="absolute right-0 top-0 h-full w-1/2 md:block hidden">
-        <Image fill className="object-cover object-[50%_50%] absolute right-0 top-0" src="/hero.jpeg" alt="Construction Company" />
-      </div>
-    </div> */}
-    <div className="text-foreground bg-white">
-      <div className="w-[90%] container md:w-[85%] mx-auto pt-40 pb-20">
-        <div className="grid grid-cols-1 pb-20 md:grid-cols-2">
-          <h1 className="md:ml-10 mb-10 font-semibold text-5xl/16 md:text-7xl/21 capitalize text-center md:mb-0 md:text-start">
-            From  <span className="font-bold">blueprint </span>
-            <br />
-            <span className="md:ml-10">to Brilliance</span>
-          </h1>
-          <h5 className="self-end text-xl text-center md:text-start md:pl-20">We help deliver solutions in site preparation, excavation, foundations, drainage and civil engineering.</h5>
-        </div>
-        <div className="h-125 w-full relative">
-          <Image
-            className="object-cover"
-            fill
-            src="/hero.jpeg"
-            alt="Hero"
-          />
-        </div>
-      </div>
+      <div className="absolute flex items-center gap-2 text-xs text-white rotate-90 md:text-sm -right-8 md:right-0 top-1/2">Scroll to see more<ArrowRight size={16} /></div>
     </div>
     <Services />
     <Consultation />

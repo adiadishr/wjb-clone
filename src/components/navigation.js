@@ -36,19 +36,17 @@ export default function Nav() {
     <div className="fixed top-0 w-full z-50">
       <nav
         className={cn(
-          "max-h-[100px] h-[100px] duration-300",
-          pathname !== "/" ?
-            scrolled
-              ? "bg-white text-black"
-              : "bg-transparent  text-white"
-            : "bg-white text-black"
+          "max-h-[80px] h-[80px] duration-300",
+          scrolled
+            ? "bg-white text-black"
+            : "bg-transparent  text-white"
         )}
       >
         <div className="container mx-auto flex items-center h-full justify-between w-[90%] md:w-[85%]">
           <div className="flex h-full gap-20 relative">
-            <div className="absolute left-0 md:-left-4 -top-2.5">
+            <div className="absolute left-0 md:-left-4 -top-3.5">
               <div className="relative size-28">
-                <Image className={cn("object-cover", pathname !== "/" && !scrolled && "brightness-1000 saturate-0")} src="/logo.png" fill alt="Logo" />
+                <Image className={cn("object-cover", !scrolled && "brightness-1000 saturate-0")} src="/logo.png" fill alt="Logo" />
               </div>
             </div>
             <div className="lg:flex items-center gap-5 text-sm font-medium uppercase hidden md:ml-40">
@@ -76,7 +74,7 @@ export default function Nav() {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <Link href="/contact" className="bg-primary px-6 hover:pr-12 py-3 text-white cursor-pointer hover:bg-transparent hover:text-white duration-700 shadow relative z-10 group justify-between items-center flex uppercase">
+            <Link href="/contact" className="bg-primary px-6 hover:pr-12 py-2 md:text-base text-sm md:py-3 text-white cursor-pointer hover:bg-transparent hover:text-white duration-700 shadow relative z-10 group justify-between items-center flex uppercase">
               <div className="inset-0 absolute bg-black/80 w-0 group-hover:w-full duration-700 -z-10 h-1/2" />
               <div className="right-0 absolute bg-black/80 w-0 group-hover:w-full duration-700 -z-10 h-1/2 top-1/2 scale-x-[-1]" />
               Get a Quote
