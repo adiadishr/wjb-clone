@@ -132,7 +132,7 @@
   }
 
   .subheading {
-    @apply text-primary text-2xl
+    @apply text-primary text-xl md:text-3xl
   }
 
   .subheading-gradient {

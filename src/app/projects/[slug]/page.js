@@ -1,6 +1,6 @@
 import AuxHero from "@/components/aux-hero";
 import { projects } from "@/constants/projects";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Box } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,9 +11,9 @@ export default async function Page({ params }) {
     notFound()
   }
   return (<>
-    <AuxHero title={project.title} />
+    <AuxHero title="Project Details" src="/hero-1.jpeg" objPosition="object-[0%_25%]" shape={Box} />
     <div className="bg-white">
-      <div className="container mx-auto w-[90%] py-20">
+      <div className="container mx-auto md:w-[85%] w-[90%] pt-0 pb-20">
         <div className="relative w-full h-[30rem]">
           <Image fill src={project.src} alt={project.title} className="object-cover" />
         </div>
@@ -24,30 +24,30 @@ export default async function Page({ params }) {
               <div className="text-paragraph">Ground Works</div>
             </div>
             <div>
-              <div className="font-bold text-foreground">Project Category:</div>
-              <div className="text-paragraph">Ground Works</div>
+              <div className="font-bold text-foreground">Clients:</div>
+              <div className="text-paragraph">Caper Monar</div>
             </div>
             <div>
-              <div className="font-bold text-foreground">Project Category:</div>
-              <div className="text-paragraph">Ground Works</div>
+              <div className="font-bold text-foreground">Project Date:</div>
+              <div className="text-paragraph">13 June, 2024</div>
             </div>
             <div>
-              <div className="font-bold text-foreground">Project Category:</div>
-              <div className="text-paragraph">Ground Works</div>
+              <div className="font-bold text-foreground">Avenue End Date:</div>
+              <div className="text-paragraph">22 July, 2024</div>
             </div>
             <div>
-              <div className="font-bold text-foreground">Project Category:</div>
-              <div className="text-paragraph">Ground Works</div>
+              <div className="font-bold text-foreground">Locations:</div>
+              <div className="text-paragraph">Caper Monar college SE12 ACS</div>
             </div>
             <div>
-              <div className="font-bold text-foreground">Project Category:</div>
-              <div className="text-paragraph">Ground Works</div>
+              <div className="font-bold text-foreground">Contract Value:</div>
+              <div className="text-paragraph">£1.218 Million</div>
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-12 gap-x-8 gap-y-8">
-          <div className="bg-neutral-100 relative p-8 flex flex-col gap-y-6 col-span-12 lg:col-span-7">
-            <div className="text-3xl font-semibold tracking-tight">{project.title}</div>
+        <div className="grid grid-cols-12 gap-x-20 gap-y-10">
+          <div className="relative flex flex-col gap-y-6 col-span-12 lg:col-span-7">
+            <div className="heading gradient-text tracking-tight">{project.title}</div>
             <div className="text-base/6 text-paragraph">Groundworks construction services in London are essential for ensuring the stability and durability of any building project. Groundworks companies within of provide critical services such as excavation, land grading, and foundation laying. These companies play a significant role in preparing the site for construction, addressing key tasks like drainage solutions, soil compaction, and vegetation clearance. By choosing groundworks companies near me London, you can ensure that your project benefits from the expertise of skilled contractors who are familiar with the local area and regulations. Whether you&apos;re seeking ground works contractors in London or a reliable civil engineering company near within , the foundation of your building is in capable hands.
             </div>
             <div className="text-base/6 text-paragraph">The importance of quality groundwork in construction cannot be overstated. It lays the groundwork (literally!) for a strong, stable structure by preparing the land and ensuring proper drainage, preventing future structural problems. From site preparation to foundation work, groundworks involve advanced tools and engineering precision. By utilizing groundworks services near , you ensure that your project is built on a solid foundation, capable of withstanding the the test of time.</div>

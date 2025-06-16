@@ -4,7 +4,7 @@ import { Box } from "lucide-react";
 
 export default function Page() {
   return (<>
-    <AuxHero title={'Portfolio'} src="/hero-1.jpeg" objPosition="object-[0%_25%]" shape={Box} shapeColor="bg-gradient-to-br from-primary to-yellow-300" />
+    <AuxHero title={'Portfolio'} src="/hero-1.jpeg" objPosition="object-[0%_25%]" shape={Box}/>
     <Projects page />
   </>
   )
