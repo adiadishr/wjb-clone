@@ -22,7 +22,7 @@ export default function Consultation() {
         </div>
       </div>
     </div>
-    <div className="container -translate-y-1/2 mx-auto w-[90%] md:w-[85%] flex">
+    <div className="container -translate-y-1/2 lg:flex hidden mx-auto w-[90%] md:w-[85%]">
       <div data-aos='flip-up' data-aos-offset='-150' className="md:p-12 p-8 w-full bg-primary text-primary-foreground flex-wrap flex items-center justify-between gap-y-4 md:gap-y-16">
         <div data-aos='fade-up' ata-aos-offset='-150' data-aos-delay='150'>
           <div className="heading"><NumberTicker value={1200} startValue={1000} />+</div>
