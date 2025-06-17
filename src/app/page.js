@@ -8,7 +8,6 @@ import Services from "@/components/services";
 import { TimelineDemo } from "@/components/timeline";
 import Blogs from "@/components/blogs";
 import Projects from "@/components/projects";
-import Link from "next/link";
 import { VelocityScroll } from "@/components/magicui/velocity-based-scroll";
 
 export default function Page() {
@@ -83,7 +82,7 @@ export default function Page() {
       </section>
     </div>
     <Projects />
-    <div className="bg-primary text-white py-20">
+    <div className="bg-gradient-to-b from-primary to-yellow-500 text-white py-20">
       <VelocityScroll numRows={1} defaultVelocity={2.5} className="text-5xl font-normal">
         Hayes Plant Hire
       </VelocityScroll>

@@ -24,20 +24,20 @@ export default function Consultation() {
     </div>
     <div className="bg-white">
       <div className="container -translate-y-1/2 lg:flex hidden mx-auto w-[90%] md:w-[85%]">
-        <div data-aos='flip-up' data-aos-offset='-150' className="md:p-12 p-8 w-full bg-primary text-primary-foreground flex-wrap flex items-center justify-between gap-y-4 md:gap-y-16">
-          <div data-aos='fade-up' ata-aos-offset='-150' data-aos-delay='150'>
+        <div data-aos='flip-up' data-aos-offset='-200' className="md:p-12 p-8 w-full bg-gradient-to-b from-primary to-yellow-500 text-primary-foreground flex-wrap flex items-center justify-between gap-y-4 md:gap-y-16">
+          <div data-aos='fade-up' ata-aos-offset='-450' data-aos-delay='150'>
             <div className="heading"><NumberTicker value={1200} startValue={1000} />+</div>
             <div className="text-sm lg:text-base font-light">Infrastructure Projects Completed</div>
           </div>
-          <div data-aos='fade-up' ata-aos-offset='-150' data-aos-delay='250'>
+          <div data-aos='fade-up' ata-aos-offset='-450' data-aos-delay='250'>
             <div className="heading"><NumberTicker value={800} startValue={550} />+</div>
             <div className="text-sm lg:text-base font-light">Projects Completed</div>
           </div>
-          <div data-aos='fade-up' ata-aos-offset='-150' data-aos-delay='350'>
+          <div data-aos='fade-up' ata-aos-offset='-450' data-aos-delay='350'>
             <div className="heading"><NumberTicker value={95} startValue={89} />%</div>
             <div className="text-sm md:text-base font-light">Client Satisfaction Rate Across the UK</div>
           </div>
-          <div data-aos='fade-up' ata-aos-offset='-150' data-aos-delay='450'>
+          <div data-aos='fade-up' ata-aos-offset='-450' data-aos-delay='450'>
             <div className="heading"><NumberTicker value={800} startValue={550} />+</div>
             <div className="text-sm md:text-base font-light">Public Sector Contracts Delivered</div>
           </div>
