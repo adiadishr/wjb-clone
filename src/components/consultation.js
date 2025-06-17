@@ -15,7 +15,7 @@ export default function Consultation() {
         </div>
         <div className="lg:w-2/3 ml-auto z-20 w-full">
           <div data-aos='fade-up' className="text-sm font-medium leading-none mb-4">Get Consultation</div>
-          <div data-aos='fade-up' className="leading-tight text-3xl sm:text-4xl font-semibold lg:text-5xl tracking-tight max-w-max mb-8 w-max">
+          <div data-aos='fade-up' className="leading-tight text-3xl sm:text-4xl font-semibold lg:text-5xl tracking-tight mb-10">
             Schedule a free Consultation!
           </div>
           <Link href="/contact" className="btn w-max gap-2 ml-auto md:ml-0" size={'lg'}><PhoneCall fill="white" size={16} />Contact Us</Link>

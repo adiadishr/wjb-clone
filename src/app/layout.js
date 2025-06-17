@@ -4,6 +4,7 @@ import Nav from "@/components/navigation";
 import Footer from "@/components/footer";
 import { LenisComponent } from "@/hooks/lenis";
 import UseAOS from "@/hooks/use-aos";
+import PageClient from "@/components/page-client";
 
 export const metadata = {
   title: "WJB Ground Works",
@@ -18,9 +19,11 @@ export default function RootLayout({ children }) {
       >
         <LenisComponent />
         <UseAOS />
-        <Nav />
-        {children}
-        <Footer />
+        <PageClient>
+          <Nav />
+          {children}
+          <Footer />
+        </PageClient>
       </body>
     </html>
   );
