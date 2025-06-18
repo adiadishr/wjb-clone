@@ -108,7 +108,7 @@ export default function ContactForm() {
           data-aos-offset="-200"
         >
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d49.01487505325154!2d-0.3386760299544168!3d51.500506931420475!2m2!1f187.28096838078844!2f6.13469231285037!3m2!1i1024!2i768!4f59.99659545210261!3m3!1m2!1s0x48760d71a43f4b1b%3A0x36dc15523bd3e854!2sHayes%20Gate%20Plant%20Hire%20Ltd!5e1!3m2!1sen!2snp!4v1749987088607!5m2!1sen!"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.7117972033748!2d-0.5323914665757757!3d51.48396071361076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876704ffc6e59a1%3A0x6a9e6562fd5107c!2s67%20Moreland%20Ave%2C%20Colnbrook%2C%20Slough%20SL3%200LL%2C%20UK!5e1!3m2!1sen!2snp!4v1750240726737!5m2!1sen!2snp"
             className="w-full h-full border-0"
             allowFullScreen=""
             loading="lazy"
